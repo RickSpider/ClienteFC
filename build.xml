@@ -10,6 +10,46 @@
 <project name="ClienteFC" default="default" basedir=".">
     <description>Builds, tests, and runs the project ClienteFC.</description>
     <import file="nbproject/build-impl.xml"/>
+
+    <path id="master-classpath">
+		<fileset dir="lib/">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+    <target name="compile">
+		<javac destdir="classes/" source="1.8" target="1.8" debug="true" encoding="UTF-8">
+			<src path="src/" />
+			<classpath refid="master-classpath" />
+		</javac>
+	</target>
+
+    <target name="build-jar">
+		<antcall target="compile" />
+		<antcall target="jar" />
+	</target>
+
+<!-- 
+    <jar destfile="${target.dir}/my-app.jar">
+    <fileset dir="${target.dir}/classes" />
+    <fileset dir="${src.dir}" includes="*/.java"/>
+</jar>
+-->
+
+    <target name="jar">
+		<jar  destfile="jar/ClienteFC.jar" >
+
+            <fileset dir="classes" />
+            <fileset dir="src" includes="**"/>
+
+
+			<zipfileset src="lib/gson-2.10.jar" excludes="META-INF/*" />
+			<!-- <zipfileset src="lib/clienteWS.jar" excludes="META-INF/*" />
+			<zipfileset src="lib/commons-discovery-0.2.jar" excludes="META-INF/*" />
+			<zipfileset src="lib/commons-logging-api-1.1.1.jar" excludes="META-INF/*" />
+			<zipfileset src="lib/commonWS.jar" excludes="META-INF/*" /> -->
+		</jar>
+	</target>
     <!--
 
     There exist several targets which are by default empty and which can be 
