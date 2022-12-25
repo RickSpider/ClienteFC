@@ -73,6 +73,18 @@ public class Receptor {
         return tipoDocumento;
     }
 
+    /**
+     * 
+     * 1:Cedula Paraguay
+     * 2:Pasaporte
+     * 3:Cedula Extranjera
+     * 4:Carnet de Residencia
+     * 5:Innominado
+     * 6:Tarjeta Diplomatica de exoneracion fiscal
+     * 9:Otro
+     * 
+     * @param tipoDocumento 
+     */
     public void setTipoDocumento(Long tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
