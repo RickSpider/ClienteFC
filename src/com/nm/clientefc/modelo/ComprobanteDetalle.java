@@ -10,102 +10,126 @@ package com.nm.clientefc.modelo;
  * @author BlackSpider
  */
 public class ComprobanteDetalle {
- 
-    private String itemCodigo;
-    private String itemDescripcion;
-    private Long itemUndMedida;
-    private double desccuento;
-    
-    private double cantidad;
-    private double precioUnitario;
-    
-  
-    private Long afectacionTributaria;
-    private int proporcionIVA;
-    private int tasaIVA;
 
-    public String getItemCodigo() {
-        return itemCodigo;
-    }
+	private String itemCodigo;
+	private String itemDescripcion;
+	private Long itemUndMedida;
+	private double descuento;
 
-    public void setItemCodigo(String itemCodigo) {
-        this.itemCodigo = itemCodigo;
-    }
+	private double cantidad;
+	private double precioUnitario;
 
-    public String getItemDescripcion() {
-        return itemDescripcion;
-    }
+	private double totalExentas;
+	private double totalIVA5;
+	private double totalIVA10;
 
-    public void setItemDescripcion(String itemDescripcion) {
-        this.itemDescripcion = itemDescripcion;
-    }
+	private Long afectacionTributaria;
+	private int proporcionIVA;
+	private int tasaIVA;
 
-    public double getCantidad() {
-        return cantidad;
-    }
+	public String getItemCodigo() {
+		return itemCodigo;
+	}
 
-    public void setCantidad(double cantidad) {
-        this.cantidad = cantidad;
-    }
+	public void setItemCodigo(String itemCodigo) {
+		this.itemCodigo = itemCodigo;
+	}
 
-    
-    public double getPrecioUnitario() {
-        return precioUnitario;
-    }
+	public String getItemDescripcion() {
+		return itemDescripcion;
+	}
 
-    public void setPrecioUnitario(double precioUnitario) {
-        this.precioUnitario = precioUnitario;
-    }
+	public void setItemDescripcion(String itemDescripcion) {
+		this.itemDescripcion = itemDescripcion;
+	}
 
-    public int getProporcionIVA() {
-        return proporcionIVA;
-    }
+	public double getCantidad() {
+		return cantidad;
+	}
 
-    public void setProporcionIVA(int proporcionIVA) {
-        this.proporcionIVA = proporcionIVA;
-    }
+	public void setCantidad(double cantidad) {
+		this.cantidad = cantidad;
+	}
 
-    public int getTasaIVA() {
-        return tasaIVA;
-    }
+	public double getPrecioUnitario() {
+		return precioUnitario;
+	}
 
-    public void setTasaIVA(int tasaIVA) {
-        this.tasaIVA = tasaIVA;
-    }
+	public void setPrecioUnitario(double precioUnitario) {
+		this.precioUnitario = precioUnitario;
+	}
 
-    public Long getItemUndMedida() {
-        return itemUndMedida;
-    }
+	public int getProporcionIVA() {
+		return proporcionIVA;
+	}
 
-    public void setItemUndMedida(Long itemUndMedida) {
-        this.itemUndMedida = itemUndMedida;
-    }
+	public void setProporcionIVA(int proporcionIVA) {
+		this.proporcionIVA = proporcionIVA;
+	}
 
-    public Long getAfectacionTributaria() {
-        return afectacionTributaria;
-    }
+	public int getTasaIVA() {
+		return tasaIVA;
+	}
 
-    /**
-     * Posibles valores
-     *   
-     *   1: Gravado IVA
-     *   2: Exonerado (Art. 83- Ley 125/91)
-     *   3: Exento
-     *   4: Gravado parcial (Grav-Exento)
-     * 
-     * @param afectacionTributaria 
-     */
-    public void setAfectacionTributaria(Long afectacionTributaria) {
-        this.afectacionTributaria = afectacionTributaria;
-    }
+	public void setTasaIVA(int tasaIVA) {
+		this.tasaIVA = tasaIVA;
+	}
 
-    public double getDesccuento() {
-        return desccuento;
-    }
+	public Long getItemUndMedida() {
+		return itemUndMedida;
+	}
 
-    public void setDesccuento(double desccuento) {
-        this.desccuento = desccuento;
-    }
+	public void setItemUndMedida(Long itemUndMedida) {
+		this.itemUndMedida = itemUndMedida;
+	}
 
-     
+	public Long getAfectacionTributaria() {
+		return afectacionTributaria;
+	}
+
+	/**
+	 * Posibles valores
+	 * 
+	 * 1: Gravado IVA 2: Exonerado (Art. 83- Ley 125/91) 3: Exento 4: Gravado
+	 * parcial (Grav-Exento)
+	 * 
+	 * @param afectacionTributaria
+	 */
+	public void setAfectacionTributaria(Long afectacionTributaria) {
+		this.afectacionTributaria = afectacionTributaria;
+	}
+
+	public double getDescuento() {
+		return descuento;
+	}
+
+	public double getTotalExentas() {
+		return totalExentas;
+	}
+
+	public double getTotalIVA5() {
+		return totalIVA5;
+	}
+
+	public double getTotalIVA10() {
+		return totalIVA10;
+	}
+
+	public void setDescuento(double descuento) {
+		this.descuento = descuento;
+	}
+
+	public void setTotalExentas(double totalExentas) {
+		this.totalExentas = totalExentas;
+	}
+
+	public void setTotalIVA5(double totalIVA5) {
+		this.totalIVA5 = totalIVA5;
+	}
+
+	public void setTotalIVA10(double totalIVA10) {
+		this.totalIVA10 = totalIVA10;
+	}
+
+	
 }

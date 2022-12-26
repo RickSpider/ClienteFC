@@ -24,7 +24,7 @@ public class Contribuyente {
      * 
      */
     private String nombre; //razon social
-    private String nombreFantacia;
+    private String nombreFantasia;
     private Distrito distrito;
     private String direccion;
     private String numCasa;
@@ -70,14 +70,6 @@ public class Contribuyente {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getNombreFantacia() {
-        return nombreFantacia;
-    }
-
-    public void setNombreFantacia(String nombreFantacia) {
-        this.nombreFantacia = nombreFantacia;
     }
 
     public String getDireccion() {
@@ -139,6 +131,18 @@ public class Contribuyente {
     public Distrito getDistrito() {
         return distrito;
     }
+
+	public String getNombreFantasia() {
+		return nombreFantasia;
+	}
+
+	public void setNombreFantasia(String nombreFantasia) {
+		this.nombreFantasia = nombreFantasia;
+	}
+
+	public void setDistrito(Distrito distrito) {
+		this.distrito = distrito;
+	}
 
     
     
