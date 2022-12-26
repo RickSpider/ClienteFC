@@ -11,7 +11,6 @@ package com.nm.clientefc.modelo;
  */
 public class Kude {
     
-    private Contribuyente contribuyente;
     private String qr;
     private String cdc;
     
@@ -37,14 +36,5 @@ public class Kude {
     public void setCdc(String cdc) {
         this.cdc = cdc;
     }
-
-    public Contribuyente getContribuyente() {
-        return contribuyente;
-    }
-
-    public void setContribuyente(Contribuyente contribuyente) {
-        this.contribuyente = contribuyente;
-    }
-    
     
 }
