@@ -6,6 +6,7 @@
 package com.nm.clientefc.servicio;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.nm.clientefc.modelo.Comprobante;
 import com.nm.clientefc.modelo.Kude;
 import java.io.BufferedReader;
@@ -32,11 +33,12 @@ public class ClientHTTP {
      */
     public Kude enviarComprovante(String link, Comprobante comprobante) throws IOException {
 
-        return this.enviarComprovante(link, new Gson().toJson(comprobante));        
+    	Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").create();
+        return this.enviarComprovante(link, gson.toJson(comprobante));        
     }
     
     public Kude enviarComprovante(String link, String jsonComprobante) throws IOException {
-        
+        System.out.println(jsonComprobante);
         URL url = new URL(link);
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         urlConnection.setDoOutput(true);        
@@ -55,11 +57,10 @@ public class ClientHTTP {
         out.close();
         
         int httpResult = urlConnection.getResponseCode();
-        //System.out.println(HttpResult);
+        System.out.println(httpResult);
         
         StringBuffer sb = new StringBuffer();
-        if (httpResult == HttpURLConnection.HTTP_OK
-                || httpResult == HttpURLConnection.HTTP_CREATED) {            
+        if (httpResult == HttpURLConnection.HTTP_CREATED) {            
             
             BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "utf-8"));            
             

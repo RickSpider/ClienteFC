@@ -6,6 +6,7 @@
 package com.nm.clientefc.modelo;
 
 import java.util.Calendar;
+import java.util.Date;
 
 /**
  *
@@ -17,7 +18,7 @@ public class Timbrado {
     private String establecimiento;
     private String puntoExpedicion;
     private String documentoNro;
-    private Calendar fecIni;
+    private Date fecIni;
 
     public String getTimbrado() {
         return timbrado;
@@ -51,11 +52,11 @@ public class Timbrado {
         this.documentoNro = documentoNro;
     }
 
-    public Calendar getFecIni() {
+    public Date getFecIni() {
         return fecIni;
     }
 
-    public void setFecIni(Calendar fecIni) {
+    public void setFecIni(Date fecIni) {
         this.fecIni = fecIni;
     }
     

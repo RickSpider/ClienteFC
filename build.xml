@@ -44,10 +44,13 @@
 
 
 			<zipfileset src="lib/gson-2.10.jar" excludes="META-INF/*" />
-			<!-- <zipfileset src="lib/clienteWS.jar" excludes="META-INF/*" />
-			<zipfileset src="lib/commons-discovery-0.2.jar" excludes="META-INF/*" />
-			<zipfileset src="lib/commons-logging-api-1.1.1.jar" excludes="META-INF/*" />
-			<zipfileset src="lib/commonWS.jar" excludes="META-INF/*" /> -->
+			<!-- <zipfileset src="lib/clienteWS.jar" excludes="META-INF/*" /> -->
+			<zipfileset src="lib/commons-beanutils-1.9.4.jar" excludes="META-INF/*" />
+			<zipfileset src="lib/commons-collections4-4.4.jar" excludes="META-INF/*" />
+            <zipfileset src="lib/commons-digester-2.1.jar" excludes="META-INF/*" />
+            <zipfileset src="lib/commons-logging-1.2.jar" excludes="META-INF/*" />
+			<zipfileset src="lib/jasperreports-6.20.0.jar" excludes="META-INF/*" />
+            <zipfileset src="lib/zxing.jar" excludes="META-INF/*" /> 
 		</jar>
 	</target>
     <!--

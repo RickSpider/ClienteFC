@@ -22,13 +22,13 @@ public class Main {
         String json = "{\n" +
 "    \"contribuyente\": {\n" +
 "        \"contribuyenteid\": 1,\n" +
-"        \"pass\": \"\"\n" +
+"        \"pass\": \"A665A45920422F9D417E4867EFDC4FB8A04A1F3FFF1FA07E998E86F7F7A27AE3\"\n" +
 "    },\n" +
 "    \"timbrado\": {\n" +
 "        \"timbrado\": \"12558948\",\n" +
 "        \"establecimiento\": \"001\",\n" +
 "        \"puntoExpedicion\": \"001\",\n" +
-"        \"documentoNro\": \"0000108\",\n" +
+"        \"documentoNro\": \"0000121\",\n" +
 "        \"fecIni\": \"2021-08-25T00:00:00-04:00\"\n" +
 "    },\n" +
 "	\"sucursal\": \"Central\",\n" +
@@ -36,7 +36,7 @@ public class Main {
 "        \"docNro\": \"4912021\",\n" +
 "        \"dv\": \"2\"\n" +
 "    },\n" +
-"    \"fecha\": \"2022-12-19T00:00:00-04:00\",\n" +
+"    \"fecha\": \"2022-12-26T00:00:00-04:00\",\n" +
 "    \"condicionOperacion\":{\n" +
 "\n" +
 "        \"condicion\":1,\n" +
@@ -93,7 +93,7 @@ public class Main {
 "    ]\n" +
 "}";
         
-       Kude kude =  cliente.enviarComprovante("http://localhost:5050/factura", json);
+       Kude kude =  cliente.enviarComprovante("http://192.168.1.50:5050/factura", json);
        
         System.out.println("esto retorno "+kude.getQr());
         
