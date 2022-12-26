@@ -60,7 +60,6 @@ public class Comprobante {
     private double totalExcento;
 
     public Contribuyente getContribuyente() {
-        
         return contribuyente;
     }
 

@@ -13,7 +13,9 @@ public class Receptor {
 
     private String docNro;
     private String dv;
-    
+    private String razonSocial;
+    private String telefono;
+    private String email;
     //estos campos se debe agregar si el receptor no tiene ruc
     private Long tipoDocumento;
     private String direccion;
@@ -136,6 +138,42 @@ public class Receptor {
     public void setCasaNro(Integer casaNro) {
         this.casaNro = casaNro;
     }
+
+
+
+	public String getRazonSocial() {
+		return razonSocial;
+	}
+
+
+
+	public void setRazonSocial(String razonSocial) {
+		this.razonSocial = razonSocial;
+	}
+
+
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
     
     
   
