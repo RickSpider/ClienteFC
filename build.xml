@@ -29,6 +29,11 @@
 		<antcall target="jar" />
 	</target>
 
+    <target name="build-jar2">
+		<antcall target="compile" />
+		<antcall target="jar2" />
+	</target>
+
 <!-- 
     <jar destfile="${target.dir}/my-app.jar">
     <fileset dir="${target.dir}/classes" />
@@ -53,6 +58,17 @@
             <zipfileset src="lib/zxing.jar" excludes="META-INF/*" /> 
 		</jar>
 	</target>
+
+    <target name="jar2">
+		<jar  destfile="jar/ClienteFC2.jar" >
+
+            <fileset dir="classes" />
+            <fileset dir="src" includes="**"/>
+		</jar>
+	</target>
+
+
+
     <!--
 
     There exist several targets which are by default empty and which can be 
