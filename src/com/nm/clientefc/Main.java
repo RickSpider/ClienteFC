@@ -20,7 +20,7 @@ import net.sf.jasperreports.engine.JRException;
 public class Main {
 
     public static void main(String[] args) throws JRException, IOException, FileNotFoundException, WriterException {
-
+    	System.out.println("inicio proceso...");
         String help = "Los campos con \"*\" son obligatorios \n"
                 + "-L: path del logo. \n"
                 + "-jc: Json comprobante * \n"
@@ -92,6 +92,7 @@ public class Main {
        GenerarKude gk = new GenerarKude();
        gk.generarKudePDF(pathReporte, pathDestino, comprobante, kude);
        
+       System.out.println("fin del proceso...");
     }
 
 }
