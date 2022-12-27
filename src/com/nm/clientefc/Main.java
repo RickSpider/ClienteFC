@@ -21,7 +21,7 @@ public class Main {
 
     public static void main(String[] args) throws JRException, IOException, FileNotFoundException, WriterException {
 
-        String help = "Los campos con \"*\" son obligatorios"
+        String help = "Los campos con \"*\" son obligatorios \n"
                 + "-L: path del logo. \n"
                 + "-jc: Json comprobante * \n"
                 + "-jk: Json kude *\n"
