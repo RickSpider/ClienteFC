@@ -17,7 +17,7 @@ import java.util.Date;
 //por el momento solo soporte para guaranies
 
 public class Comprobante {
-    
+
    // private Long comprobanteid;
     
     
