@@ -11,6 +11,8 @@ import com.nm.clientefc.modelo.Kude;
 import com.nm.clientefc.util.GenerarKude;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import net.sf.jasperreports.engine.JRException;
 
 /**
@@ -19,7 +21,8 @@ import net.sf.jasperreports.engine.JRException;
  */
 public class Main {
 
-    public static void main(String[] args) throws JRException, IOException, FileNotFoundException, WriterException {
+    
+    public static void main(String[] args){
     	System.out.println("inicio proceso...");
         String help = "Los campos con \"*\" son obligatorios \n"
                 + "-L: path del logo. \n"
@@ -90,7 +93,18 @@ public class Main {
         Comprobante comprobante = new Gson().fromJson(jsonComprobante, Comprobante.class);
 
        GenerarKude gk = new GenerarKude();
-       gk.generarKudePDF(pathReporte, pathDestino, comprobante, kude);
+        try {
+            gk.generarKudePDF(pathReporte, pathDestino, comprobante, kude);
+        } catch (JRException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex.getMessage());
+        } catch (IOException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+             System.out.println(ex.getMessage());
+        } catch (WriterException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+             System.out.println(ex.getMessage());
+        }
        
        System.out.println("fin del proceso...");
     }
