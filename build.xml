@@ -44,6 +44,10 @@
     <target name="jar">
 		<jar  destfile="jar/ClienteFC.jar" >
 
+            <manifest>
+                <attribute name="Main-Class" value="com.nm.clientefc.Main" />
+            </manifest>
+
             <fileset dir="classes" />
             <fileset dir="src" includes="**"/>
 
