@@ -19,7 +19,7 @@ import net.sf.jasperreports.engine.JRException;
  */
 public class Main {
 
-    public static void Main(String[] args) throws JRException, IOException, FileNotFoundException, WriterException {
+    public static void main(String[] args) throws JRException, IOException, FileNotFoundException, WriterException {
 
         String help = "Los campos con \"*\" son obligatorios"
                 + "-L: path del logo. \n"
