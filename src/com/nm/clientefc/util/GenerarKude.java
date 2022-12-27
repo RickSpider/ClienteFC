@@ -115,7 +115,7 @@ public class GenerarKude {
         }
         
         public void generarKudePDF(String pathReporte, String pathSalida, Comprobante comprobante, Kude kude) {
-
+        	System.out.println("este es el path de salida "+pathSalida);
             OutputStream output = null;
             try {
                 output = new FileOutputStream(new File(pathSalida));

@@ -4,6 +4,8 @@
  */
 package com.nm.clientefc;
 
+import java.nio.file.Paths;
+
 import com.google.gson.Gson;
 import com.nm.clientefc.modelo.Comprobante;
 import com.nm.clientefc.modelo.Kude;
@@ -83,6 +85,11 @@ public class Main {
             }
 
         }
+        
+        System.out.println("salida " +pathDestino);
+        System.out.println("reporte "+pathReporte);
+        System.out.println(jsonKude);
+        System.out.println(jsonComprobante);
         
         Kude kude = new Gson().fromJson(jsonKude, Kude.class);
         Comprobante comprobante = new Gson().fromJson(jsonComprobante, Comprobante.class);
