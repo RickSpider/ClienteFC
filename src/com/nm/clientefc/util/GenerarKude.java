@@ -19,6 +19,8 @@ import com.nm.clientefc.modelo.Comprobante;
 import com.nm.clientefc.modelo.Kude;
 import com.nm.clientefc.servicio.ClientHTTP;
 import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperExportManager;
@@ -38,14 +40,20 @@ public class GenerarKude {
 	//private String pathSalida = "/home/erick/prueba.pdf";
 	//private String pathLogoEmpresa;
 
-	private JasperPrint generarReporte(String pathReporte, Comprobante comprobante, Kude kude) throws JRException, IOException, WriterException {
+	private JasperPrint generarReporte(String pathReporte, Comprobante comprobante, Kude kude) {
 		
 		//tipoDocumento = "Factura Electrónica";
 //		if(kude == null) return;
 		GenerarQR generaQR = new GenerarQR();
-		BufferedImage imagenQR = generaQR.crearQR(kude.getQr(), 100, 100);
+		BufferedImage imagenQR = null;
+            try {
+                imagenQR = generaQR.crearQR(kude.getQr(), 100, 100);
 //		File fileLogo = new File(pathLogoEmpresa);
 //		BufferedImage imagen = ImageIO.read(file); logo de la empresa
+            } catch (WriterException ex) {
+                Logger.getLogger(GenerarKude.class.getName()).log(Level.SEVERE, null, ex);
+                 System.out.println("Error al generar el qr " + ex.getLocalizedMessage() + " " + ex.getMessage());
+            }
 		
 		Map<String, Object> parametros = new HashMap<String, Object>();
 		parametros.put("comprobante", comprobante);
@@ -84,7 +92,13 @@ public class GenerarKude {
                     
                 }
 
-		JasperPrint print = JasperFillManager.fillReport(pathReporte, parametros, new JRBeanCollectionDataSource(comprobante.getDetalles()));
+		JasperPrint print = null;
+            try {
+                print = JasperFillManager.fillReport(pathReporte, parametros, new JRBeanCollectionDataSource(comprobante.getDetalles()));
+            } catch (JRException ex) {
+                Logger.getLogger(GenerarKude.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("Error al generar el print " + ex.getLocalizedMessage() + " " + ex.getMessage());
+            }
 	
                 return print;
 		//JasperViewer.viewReport(print);
@@ -100,10 +114,21 @@ public class GenerarKude {
             
         }
         
-        public void generarKudePDF(String pathReporte, String pathSalida, Comprobante comprobante, Kude kude) throws JRException, FileNotFoundException, IOException, WriterException{
+        public void generarKudePDF(String pathReporte, String pathSalida, Comprobante comprobante, Kude kude) {
 
-            OutputStream output = new FileOutputStream(new File(pathSalida));
-            JasperExportManager.exportReportToPdfStream(this.generarReporte(pathReporte, comprobante, kude), output);
+            OutputStream output = null;
+            try {
+                output = new FileOutputStream(new File(pathSalida));
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(GenerarKude.class.getName()).log(Level.SEVERE, null, ex);
+                 System.out.println("Error al generar el FileInputStrem con pathSalida " + ex.getLocalizedMessage() + " " + ex.getMessage());
+            }
+            try {
+                JasperExportManager.exportReportToPdfStream(this.generarReporte(pathReporte, comprobante, kude), output);
+            } catch (JRException ex) {
+                Logger.getLogger(GenerarKude.class.getName()).log(Level.SEVERE, null, ex);
+                 System.out.println("Error al generar el JasperExport " + ex.getLocalizedMessage() + " " + ex.getMessage());
+            }
         }
         
          public void generarKudeVisor(String pathReporte, String pathSalida, Comprobante comprobante, String link) throws IOException, JRException, FileNotFoundException, WriterException{

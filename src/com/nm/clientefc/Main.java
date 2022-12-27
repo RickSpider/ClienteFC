@@ -5,15 +5,10 @@
 package com.nm.clientefc;
 
 import com.google.gson.Gson;
-import com.google.zxing.WriterException;
 import com.nm.clientefc.modelo.Comprobante;
 import com.nm.clientefc.modelo.Kude;
 import com.nm.clientefc.util.GenerarKude;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import net.sf.jasperreports.engine.JRException;
+
 
 /**
  *
@@ -93,18 +88,7 @@ public class Main {
         Comprobante comprobante = new Gson().fromJson(jsonComprobante, Comprobante.class);
 
        GenerarKude gk = new GenerarKude();
-        try {
-            gk.generarKudePDF(pathReporte, pathDestino, comprobante, kude);
-        } catch (JRException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println(ex.getMessage());
-        } catch (IOException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-             System.out.println(ex.getMessage());
-        } catch (WriterException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-             System.out.println(ex.getMessage());
-        }
+       gk.generarKudePDF(pathReporte, pathDestino, comprobante, kude);
        
        System.out.println("fin del proceso...");
     }
