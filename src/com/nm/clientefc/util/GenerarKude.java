@@ -100,11 +100,10 @@ public class GenerarKude {
 
         JasperPrint print = null;
         try {
+            
             print = JasperFillManager.fillReport(pathReporte, parametros,
                     new JRBeanCollectionDataSource(comprobante.getDetalles()));
-            for (ComprobanteDetalle o : comprobante.getDetalles()) {
-                System.out.println("codigo del item: " + o.getItemCodigo() + "\n");
-            }
+            
         } catch (JRException ex) {
             Logger.getLogger(GenerarKude.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("Error al generar el print " + ex.getLocalizedMessage() + " " + ex.getMessage());
