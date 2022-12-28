@@ -20,7 +20,7 @@ public class Main {
 
     
     public static void main(String[] args){
-    	System.out.println("inicio proceso...");
+    	System.out.println("inicio proceso... A \n");
         String help = "Los campos con \"*\" son obligatorios \n"
                 + "-L: path del logo. *\n"
                 + "-jc: Json comprobante * \n"
