@@ -86,10 +86,10 @@ public class Main {
 
         }
         
-        System.out.println("salida " +pathDestino);
-        System.out.println("reporte "+pathReporte);
-        System.out.println(jsonKude);
-        System.out.println(jsonComprobante);
+       // System.out.println("salida " +pathDestino);
+        //System.out.println("reporte "+pathReporte);
+        System.out.println(jsonKude+"/n");
+        System.out.println(jsonComprobante+"/n");
         
         Kude kude = new Gson().fromJson(jsonKude, Kude.class);
         Comprobante comprobante = new Gson().fromJson(jsonComprobante, Comprobante.class);
