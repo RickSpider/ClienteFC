@@ -107,7 +107,7 @@ public class Comprobante {
     }
     
     public String getFechaSDF(){
-        return new SimpleDateFormat("dd-MM-yyyy").format(fecha);
+        return new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(fecha);
     }
 
     public void setFecha(Date fecha) {
