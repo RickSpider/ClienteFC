@@ -107,7 +107,7 @@ public class test2 {
         Comprobante c = new Gson().fromJson(comp, Comprobante.class);
         Kude k = new Gson().fromJson(kude, Kude.class);
         
-        gk.generarKudePDF("/home/erick/JaspersoftWorkspace/MyReports/facturaOri.jasper", "/home/erick/reportes/kude1.pdf", c, k);
+        gk.generarKudeVisor("archivos/facturaOri.jasper", "resultado/kude.pdf", "archivos/logo.png" ,c, k);
       
         
     }

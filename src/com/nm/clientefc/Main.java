@@ -22,7 +22,7 @@ public class Main {
     public static void main(String[] args){
     	System.out.println("inicio proceso...");
         String help = "Los campos con \"*\" son obligatorios \n"
-                + "-L: path del logo. \n"
+                + "-L: path del logo. *\n"
                 + "-jc: Json comprobante * \n"
                 + "-jk: Json kude *\n"
                 + "-r: path template reporte *\n"
@@ -88,16 +88,16 @@ public class Main {
         
        // System.out.println("salida " +pathDestino);
         //System.out.println("reporte "+pathReporte);
-        System.out.println(jsonKude+"/n");
-        System.out.println(jsonComprobante+"/n");
+       // System.out.println(jsonKude+"/n");
+       // System.out.println(jsonComprobante+"/n");
         
         Kude kude = new Gson().fromJson(jsonKude, Kude.class);
         Comprobante comprobante = new Gson().fromJson(jsonComprobante, Comprobante.class);
 
        GenerarKude gk = new GenerarKude();
-       gk.generarKudePDF(pathReporte, pathDestino, comprobante, kude);
+       gk.generarKudePDF(pathReporte, pathDestino, pathLogo ,comprobante, kude);
        
-       System.out.println("fin del proceso...");
+       System.out.println("OK...");
     }
 
 }

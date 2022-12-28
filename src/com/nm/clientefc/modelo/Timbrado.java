@@ -5,6 +5,7 @@
  */
 package com.nm.clientefc.modelo;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -58,6 +59,14 @@ public class Timbrado {
 
     public void setFecIni(Date fecIni) {
         this.fecIni = fecIni;
+    }
+    
+    public String getFechaIniSDF(){
+        return new SimpleDateFormat("dd-MM-yyyy").format(fecIni);
+    }
+    
+    public String getDocNumFull(){
+        return this.establecimiento+"-"+this.puntoExpedicion+"-"+this.documentoNro;
     }
     
     

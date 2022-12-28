@@ -5,6 +5,7 @@
  */
 package com.nm.clientefc.modelo;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -104,6 +105,10 @@ public class Comprobante {
     public Date getFecha() {
         return fecha;
     }
+    
+    public String getFechaSDF(){
+        return new SimpleDateFormat("dd-MM-yyyy").format(fecha);
+    }
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
@@ -197,6 +202,5 @@ public class Comprobante {
         this.totalExcento = totalExcento;
     }
 
-   
-   
+    
 }
