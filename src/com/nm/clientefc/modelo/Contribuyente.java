@@ -47,6 +47,15 @@ public class Contribuyente {
 		this.contribuyenteid = contribuyenteid;
 	}
 
+	public String getActividadEconomicaPrincipal() {
+		String out = "Actividad Económica: ";
+		for (ActividadEconomica actividad : this.actividades) {
+			out += actividad.getDescripcion() + " ";
+		}
+		return out;
+	}
+	// ===================================
+
 	public String getRuc() {
 		return ruc;
 	}
@@ -141,32 +150,6 @@ public class Contribuyente {
 
 	public void setDistrito(Distrito distrito) {
 		this.distrito = distrito;
-	}
-
-	public String getActividadEconomicaPrincipal() {
-		for (ActividadEconomica actividad : this.actividades) {
-			if (actividad.isPrincipal()) {
-				return actividad.getDescripcion();
-			}
-		}
-		return null;
-	}
-
-	public static void main(String[] args) {
-		Contribuyente c = new Contribuyente();
-		ActividadEconomica a1 = new ActividadEconomica();
-		a1.setCodigo("a1");
-		a1.setDescripcion("a1");
-		a1.setPrincipal(false);
-		ActividadEconomica a2 = new ActividadEconomica();
-		a2.setCodigo("a2");
-		a2.setDescripcion("a2");
-		a2.setPrincipal(true);
-		Set<ActividadEconomica> set = new HashSet<ActividadEconomica>();
-		set.add(a2);
-		set.add(a1);
-		c.setActividades(set);
-		System.out.println(c.getActividadEconomicaPrincipal());
 	}
 
 }

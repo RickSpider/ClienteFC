@@ -135,4 +135,9 @@ public class CondicionOperacion {
         this.cuotas = cuotas;
     }
     
+    public String getCondicionStr() {
+    	String out = this.getCondicion() == 1 ? "CONTADO" : "CRÉDITO";
+    	return out;
+    }
+    
 }
