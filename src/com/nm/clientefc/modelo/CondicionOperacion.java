@@ -16,7 +16,7 @@ public class CondicionOperacion {
  
     private Long condicion;
    
-    private ArrayList<TipoPago> tiposPagos = new ArrayList<TipoPago>() ;
+    private ArrayList<TipoPago> tiposPagos;// = new ArrayList<TipoPago>() ;
     
     public Long getCondicion() {
         return condicion;
