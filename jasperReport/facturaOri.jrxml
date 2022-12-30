@@ -27,9 +27,9 @@
 		<band height="802"/>
 	</background>
 	<title>
-		<band height="128" splitType="Stretch">
+		<band height="158" splitType="Stretch">
 			<rectangle radius="0">
-				<reportElement mode="Transparent" x="-13" y="-6" width="580" height="126" uuid="3fbf0b35-3bd7-4715-9937-5b783f784970">
+				<reportElement mode="Transparent" x="-13" y="0" width="580" height="154" uuid="3fbf0b35-3bd7-4715-9937-5b783f784970">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
@@ -37,28 +37,28 @@
 				</reportElement>
 			</rectangle>
 			<textField>
-				<reportElement x="98" y="1" width="247" height="23" uuid="447372cf-948c-475f-a8b3-7477b8007387"/>
+				<reportElement x="98" y="27" width="247" height="23" uuid="447372cf-948c-475f-a8b3-7477b8007387"/>
 				<textElement verticalAlignment="Bottom">
 					<font size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{comprobante}.getContribuyente().getNombre()]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="98" y="42" width="41" height="16" uuid="0175bff7-0ac9-4bc9-b6ac-c1ba5925cc10">
+				<reportElement x="98" y="68" width="41" height="16" uuid="0175bff7-0ac9-4bc9-b6ac-c1ba5925cc10">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Ciudad:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="98" y="59" width="48" height="16" uuid="e1caa2db-bb8e-4075-b2dc-7b8d83a222d9">
+				<reportElement x="98" y="85" width="48" height="16" uuid="e1caa2db-bb8e-4075-b2dc-7b8d83a222d9">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Teléfono:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="356" y="1" width="26" height="15" uuid="bab77a7d-e880-4f08-bb18-11ff42b4b781">
+				<reportElement x="356" y="27" width="26" height="15" uuid="bab77a7d-e880-4f08-bb18-11ff42b4b781">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -68,27 +68,27 @@
 				<text><![CDATA[RUC:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="356" y="16" width="88" height="15" uuid="841487ee-e87d-44c2-b904-e201715fa1b5"/>
+				<reportElement x="356" y="42" width="88" height="15" uuid="841487ee-e87d-44c2-b904-e201715fa1b5"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Nro de Timbrado:]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement x="447" y="16" width="101" height="15" uuid="64530408-bd02-4f2c-8ef9-1ebcb7b65bc2"/>
+				<reportElement x="447" y="42" width="101" height="15" uuid="64530408-bd02-4f2c-8ef9-1ebcb7b65bc2"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getTimbrado().getTimbrado()]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="356" y="31" width="144" height="15" uuid="719a31ea-6d7e-48d6-94c6-56b07a802ef1"/>
+				<reportElement x="356" y="57" width="144" height="15" uuid="719a31ea-6d7e-48d6-94c6-56b07a802ef1"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Fecha de Inicio de Vigencia:]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement x="500" y="31" width="60" height="15" uuid="c75c2df4-dd37-4988-a7b3-56cbb0a5f8d2"/>
+				<reportElement x="500" y="57" width="60" height="15" uuid="c75c2df4-dd37-4988-a7b3-56cbb0a5f8d2"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getTimbrado().getFechaIniSDF()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="355" y="68" width="189" height="20" uuid="6973164d-74c7-458d-85ba-ffe0f99e17a3">
+				<reportElement x="355" y="94" width="189" height="20" uuid="6973164d-74c7-458d-85ba-ffe0f99e17a3">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
@@ -97,36 +97,36 @@
 				<textFieldExpression><![CDATA[$P{comprobante}.getTimbrado().getDocNumFull()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="98" y="26" width="247" height="16" uuid="65fc6a3e-51bb-4824-81e0-5d23b5fa253d"/>
+				<reportElement x="98" y="52" width="247" height="16" uuid="65fc6a3e-51bb-4824-81e0-5d23b5fa253d"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getContribuyente().getDireccion()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="138" y="42" width="207" height="16" uuid="c4a3b5fd-d2a3-427c-9bb5-98913ae80c2d"/>
+				<reportElement x="138" y="68" width="207" height="16" uuid="c4a3b5fd-d2a3-427c-9bb5-98913ae80c2d"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getContribuyente().getDistrito().getDistrito()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="146" y="59" width="198" height="16" uuid="cf124c43-bd5c-467a-abc7-fc7247e93a5b"/>
+				<reportElement x="146" y="85" width="198" height="16" uuid="cf124c43-bd5c-467a-abc7-fc7247e93a5b"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getContribuyente().getTelefono()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="382" y="1" width="115" height="15" uuid="7cdd4589-e50a-4f12-8bf9-d329eb970013">
+				<reportElement x="382" y="27" width="115" height="15" uuid="7cdd4589-e50a-4f12-8bf9-d329eb970013">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getContribuyente().getRuc() + "-"+$P{comprobante}.getContribuyente().getDv()]]></textFieldExpression>
 			</textField>
 			<image onErrorType="Blank">
-				<reportElement x="-9" y="1" width="89" height="92" uuid="235b09e6-0db0-4a8e-b062-882b8f0b759d">
+				<reportElement x="-9" y="27" width="89" height="92" uuid="235b09e6-0db0-4a8e-b062-882b8f0b759d">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<textField isBlankWhenNull="true">
-				<reportElement x="355" y="47" width="190" height="20" uuid="c55c9057-10c7-4fec-8a43-0061db9268b0">
+				<reportElement x="355" y="73" width="190" height="20" uuid="c55c9057-10c7-4fec-8a43-0061db9268b0">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
@@ -135,16 +135,25 @@
 				<textFieldExpression><![CDATA[$P{tipoDocumento}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="-9" y="94" width="364" height="26" uuid="57f0969e-a838-4886-ac34-113853238e20"/>
+				<reportElement x="-9" y="120" width="364" height="26" uuid="57f0969e-a838-4886-ac34-113853238e20"/>
 				<textElement verticalAlignment="Top">
 					<font size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{comprobante}.getContribuyente().getActividadEconomicaPrincipal()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="98" y="75" width="198" height="16" uuid="129264b0-b245-4785-8c7e-b8598d85062f"/>
+				<reportElement x="98" y="101" width="198" height="16" uuid="129264b0-b245-4785-8c7e-b8598d85062f"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getContribuyente().getEmail()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="-9" y="0" width="572" height="20" uuid="c1c9f15b-c8a9-44f0-b8fb-55a51437c5d8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new String("KuDe de ") + $P{tipoDocumento}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>
@@ -762,7 +771,7 @@
 				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,###,###,###").format($P{comprobante}.getTotalIVA10() + $P{comprobante}.getTotalIVA5())]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="458" y="25" width="108" height="18" uuid="dcc432ef-720c-4894-9050-d6d707d9718d">
+				<reportElement x="455" y="25" width="108" height="18" uuid="dcc432ef-720c-4894-9050-d6d707d9718d">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
@@ -771,7 +780,7 @@
 				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,###,###,###").format($P{comprobante}.getTotalComprobante())]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="458" y="44" width="108" height="18" uuid="b2a51ff2-f89b-486c-b57d-8ffe5708aa82">
+				<reportElement x="455" y="44" width="108" height="18" uuid="b2a51ff2-f89b-486c-b57d-8ffe5708aa82">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">

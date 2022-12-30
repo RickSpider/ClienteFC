@@ -23,6 +23,15 @@ public class Transportista {
     private String agenteRuc;
     private String agenteDV;
     private String agenteDireccion;
+    
+    public String getNaturalezaTransportista() {
+    	String out =  "No contribuyente";
+    	if(this.getDv() != null) {
+    		out = "Contribuyente";
+    		return out;
+    	}
+    	return out;
+    }
 
     public String getNombre() {
         return Nombre;

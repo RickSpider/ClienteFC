@@ -11,23 +11,23 @@ package com.nm.clientefc.modelo;
  */
 public class ComprobanteDetalle {
 
-	private String itemCodigo = "";
-	private String itemDescripcion = "";
+	private String itemCodigo;
+	private String itemDescripcion;
 	private Long itemUndMedida;
-	private String itemUndMedidaStr = "";
+	private String itemUndMedidaStr;
 
-	private double descuento = 0.0;
+	private double descuento;
 
-	private double cantidad = 0.0;
-	private double precioUnitario = 0.0;
+	private double cantidad;
+	private double precioUnitario;
 
-	private double totalExentas = 0.0;
-	private double totalIVA5 = 0.0;
-	private double totalIVA10 = 0.0;
+	private double totalExentas;
+	private double totalIVA5;
+	private double totalIVA10;
 
 	private Long afectacionTributaria;
-	private int proporcionIVA = 0;
-	private int tasaIVA = 0;
+	private int proporcionIVA;
+	private int tasaIVA;
 
 	public String getItemCodigo() {
 		return itemCodigo;

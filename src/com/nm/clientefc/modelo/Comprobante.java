@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+import com.nm.clientefc.MappingSET;
+
 /**
  *
  * @author BlackSpider
@@ -60,6 +62,17 @@ public class Comprobante {
     private double totalIVA10;
     private double totalIVA5;
     private double totalExcento;
+    
+    public String getTipoDocAsoDescripcion() {
+    	MappingSET m = new MappingSET();
+    	String out = "";
+    	for (DocAsociado doc : this.getDocAsociados()) {
+    		
+		}
+    	//String idTipo = this.getTipoDocAsoDescripcion();
+    	//m.getTipoDocAsociado(idTipoDoc)
+    	return null;
+    }
 
     public Contribuyente getContribuyente() {
         return contribuyente;
