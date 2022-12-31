@@ -69,7 +69,7 @@ public class GenerarKude {
         switch (kude.getTipo()) {
 
             case Kude.FACTURA_ELECTRONICA:
-                parametros.put("tipoDocumento", "FACTURA ELECTRONICA IMPORTACION");
+                parametros.put("tipoDocumento", "FACTURA ELECTRONICA");
                 break;
 
             case Kude.FACTURA_ELECTRONICA_IMPORTACION:
@@ -125,20 +125,20 @@ public class GenerarKude {
     }
 
     public void generarKudePDF(String pathReporte, String pathSalida, String pathLogo ,Comprobante comprobante, Kude kude) {
-        System.out.println("este es el path de salida " + pathSalida);
+        System.out.println("este es el path de salida " + pathSalida + " \n");
         OutputStream output = null;
         try {
             output = new FileOutputStream(new File(pathSalida));
         } catch (FileNotFoundException ex) {
             Logger.getLogger(GenerarKude.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("Error al generar el FileInputStrem con pathSalida " + ex.getLocalizedMessage() + " "
-                    + ex.getMessage());
+                    + ex.getMessage() + " \n");
         }
         try {
             JasperExportManager.exportReportToPdfStream(this.generarReporte(pathReporte, pathLogo ,comprobante, kude), output);
         } catch (JRException ex) {
             Logger.getLogger(GenerarKude.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("Error al generar el JasperExport " + ex.getLocalizedMessage() + " " + ex.getMessage());
+            System.out.println("Error al generar el JasperExport " + ex.getLocalizedMessage() + " " + ex.getMessage()  + " \n");
         }
     }
 

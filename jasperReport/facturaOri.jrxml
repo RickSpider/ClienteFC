@@ -126,7 +126,7 @@
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<textField isBlankWhenNull="true">
-				<reportElement x="355" y="73" width="190" height="20" uuid="c55c9057-10c7-4fec-8a43-0061db9268b0">
+				<reportElement x="355" y="73" width="203" height="20" uuid="c55c9057-10c7-4fec-8a43-0061db9268b0">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle">

@@ -11,9 +11,17 @@
 	</queryString>
 	<field name="itemCodigo" class="java.lang.String"/>
 	<field name="itemDescripcion" class="java.lang.String"/>
-	<field name="itemUnidadMedida" class="java.lang.Long"/>
+	<field name="itemUndMedida" class="java.lang.Long"/>
 	<field name="itemUndMedidaStr" class="java.lang.String"/>
+	<field name="descuento" class="java.lang.Double"/>
 	<field name="cantidad" class="java.lang.Double"/>
+	<field name="precioUnitario" class="java.lang.Double"/>
+	<field name="totalExentas" class="java.lang.Double"/>
+	<field name="totalIVA5" class="java.lang.Double"/>
+	<field name="totalIVA10" class="java.lang.Double"/>
+	<field name="afectacionTributaria" class="java.lang.Long"/>
+	<field name="proporcionIVA" class="java.lang.Double"/>
+	<field name="tasaIVA" class="java.lang.Double"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -515,13 +523,6 @@
 				</reportElement>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="90" y="2" width="100" height="15" uuid="c13e2c88-cdaf-4192-bf22-1fc7ba16f366">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a2ebe2a6-7041-45b6-a332-0a8f298ed1fd"/>
-				</reportElement>
-				<textElement textAlignment="Center"/>
-				<textFieldExpression><![CDATA[$F{itemUnidadMedida}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="197" y="0" width="360" height="17" uuid="29a26acb-d1cc-4588-96f3-e9f6964376c1">
