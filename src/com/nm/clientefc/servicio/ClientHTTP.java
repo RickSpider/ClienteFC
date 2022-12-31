@@ -8,6 +8,7 @@ package com.nm.clientefc.servicio;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.nm.clientefc.modelo.Comprobante;
+import com.nm.clientefc.modelo.Contribuyente;
 import com.nm.clientefc.modelo.Kude;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -81,10 +82,17 @@ public class ClientHTTP {
     public boolean enviarCancelacion(String link, Comprobante comprobante) throws IOException {
 
     	Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").create();
-        return this.enviarCancelacion(link, gson.toJson(comprobante));        
+        return this.enviar(link, gson.toJson(comprobante));    
+        
     }
     
-    public boolean enviarCancelacion(String link, String jsonComprobante) throws IOException {
+    public boolean enviarContribuyenteLote(String link, Contribuyente contribuyente) throws IOException{
+    
+         return this.enviar(link, new Gson().toJson(contribuyente));   
+        
+    }
+    
+    public boolean enviar(String link, String jsonComprobante) throws IOException {
         System.out.println(jsonComprobante);
         URL url = new URL(link);
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
@@ -104,22 +112,29 @@ public class ClientHTTP {
         out.close();
         
         int httpResult = urlConnection.getResponseCode();
-        System.out.println(httpResult);
+        System.out.println(httpResult+"\n");
         
         StringBuffer sb = new StringBuffer();
-        if (httpResult == HttpURLConnection.HTTP_CREATED) {            
+        if (httpResult == HttpURLConnection.HTTP_CREATED || httpResult == HttpURLConnection.HTTP_OK) {            
             urlConnection.disconnect(); 
+            
+            BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "utf-8"));            
+            
+            String line = null;            
+            while ((line = br.readLine()) != null) {                
+                sb.append(line);                
+            }            
+            br.close();  
+            
+            System.out.println(sb.toString()+"\n");
+            
             return true;            
             
         }
         
         urlConnection.disconnect(); 
         return false;
-        
-        
-        
-        
-        
+
     }
     
 }
