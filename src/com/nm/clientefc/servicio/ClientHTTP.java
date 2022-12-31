@@ -116,7 +116,7 @@ public class ClientHTTP {
         
         StringBuffer sb = new StringBuffer();
         if (httpResult == HttpURLConnection.HTTP_CREATED || httpResult == HttpURLConnection.HTTP_OK) {            
-            urlConnection.disconnect(); 
+            
             
             BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "utf-8"));            
             
@@ -125,7 +125,8 @@ public class ClientHTTP {
                 sb.append(line);                
             }            
             br.close();  
-            
+         
+            urlConnection.disconnect(); 
             System.out.println(sb.toString()+"\n");
             
             return true;            
