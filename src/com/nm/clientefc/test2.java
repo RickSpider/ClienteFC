@@ -99,32 +99,31 @@ public class test2 {
 				+ "		\"direccion\": \"Médicos del Chaco 2713 c/ M. Mallorquín. Asunción, Paraguay.\",\n"
 				+ "		\"numCasa\": \"2713\",\n" + "		\"telefono\": \"+595 21 562754\",\n"
 				+ "		\"email\": \"ventas@vidrioluz.com.py\",\n" + "		\"actividades\": [{\n"
-				+ "			\"principal\": true,\n" + "			\"codigo\": \"C4_46634\",\n"
-				+ "			\"descripcion\": \"COMERCIO AL POR MAYOR DE VIDRIOS.\"\n" + "		}, {\n"
+				+ "			\"principal\": false,\n" + "			\"codigo\": \"C4_47529\",\n"
+				+ "			\"descripcion\": \"COMERCIO AL POR MENOR DE OTROS ARTÍCULOS N.C.P.\"\n" + "		}, {\n"
+				+ "			\"principal\": false,\n" + "			\"codigo\": \"C4_46699\",\n"
+				+ "			\"descripcion\": \"COMERCIO AL POR MAYOR DE OTROS PRODUCTOS N.C.P.\"\n" + "		}, {\n"
 				+ "			\"principal\": false,\n" + "			\"codigo\": \"C4_46520\",\n"
 				+ "			\"descripcion\": \"COMERCIO AL POR MAYOR DE COMPONENTES ELECTRÓNICOS Y EQUIPOS DE COMUNICACIONES.\"\n"
-				+ "		}, {\n" + "			\"principal\": false,\n" + "			\"codigo\": \"C4_46699\",\n"
-				+ "			\"descripcion\": \"COMERCIO AL POR MAYOR DE OTROS PRODUCTOS N.C.P.\"\n" + "		}, {\n"
-				+ "			\"principal\": false,\n" + "			\"codigo\": \"C4_47529\",\n"
-				+ "			\"descripcion\": \"COMERCIO AL POR MENOR DE OTROS ARTÍCULOS N.C.P.\"\n" + "		}],\n"
+				+ "		}, {\n" + "			\"principal\": true,\n" + "			\"codigo\": \"C4_46634\",\n"
+				+ "			\"descripcion\": \"COMERCIO AL POR MAYOR DE VIDRIOS.\"\n" + "		}],\n"
 				+ "		\"pass\": \"A665A45920422F9D417E4867EFDC4FB8A04A1F3FFF1FA07E998E86F7F7A27AE3\"\n" + "	},\n"
 				+ "	\"timbrado\": {\n" + "		\"timbrado\": \"16105981\",\n" + "		\"establecimiento\": \"001\",\n"
-				+ "		\"puntoExpedicion\": \"003\",\n" + "		\"documentoNro\": \"0109236\",\n"
+				+ "		\"puntoExpedicion\": \"001\",\n" + "		\"documentoNro\": \"0105501\",\n"
 				+ "		\"fecIni\": \"2022-12-23T00:00:00-0300\"\n" + "	},\n"
 				+ "	\"sucursal\": \"Vidrioluz S.R.L.\",\n" + "	\"operacionMoneda\": \"PYG\",\n"
-				+ "	\"receptor\": {\n" + "		\"docNro\": \"2030776\",\n" + "		\"dv\": \"4\",\n"
-				+ "		\"razonSocial\": \"DELGADO ESQUIVEL, EMILIO\"\n" + "	},\n"
-				+ "	\"fecha\": \"2022-12-29T10:24:33-0300\",\n" + "	\"condicionOperacion\": {\n"
-				+ "		\"condicion\": 1,\n" + "		\"tiposPagos\": [{\n" + "			\"monto\": 2139543.0,\n"
-				+ "			\"modeda\": \"PYG\"\n" + "		}]\n" + "	},\n" + "	\"detalles\": [{\n"
-				+ "		\"itemCodigo\": \"V2I\",\n"
-				+ "		\"itemDescripcion\": \"2,25 x 1,80 plancha;  2mm - VIDRIO INCOLORO (BAJA)\",\n"
+				+ "	\"receptor\": {\n" + "		\"docNro\": \"7213746\",\n" + "		\"dv\": \"0\",\n"
+				+ "		\"razonSocial\": \"Daniel Omar Romero\"\n" + "	},\n" + "	\"tipoTransaccion\": 3,\n"
+				+ "	\"descripcionTipoTransaccion\": \"Mixto\",\n" + "	\"fecha\": \"2022-12-31T00:16:48-0300\",\n"
+				+ "	\"condicionOperacion\": {\n" + "		\"condicion\": 1,\n" + "		\"tiposPagos\": [{\n"
+				+ "			\"monto\": 74300.0,\n" + "			\"modeda\": \"PYG\"\n" + "		}]\n" + "	},\n"
+				+ "	\"detalles\": [{\n" + "		\"itemCodigo\": \"V6G\",\n"
+				+ "		\"itemDescripcion\": \"1,00 x 1,00 plancha;  6mm - m2 vidrio cortado 6mm Gris\",\n"
 				+ "		\"itemUndMedida\": 77,\n" + "		\"itemUndMedidaStr\": \"UNI\",\n"
-				+ "		\"descuento\": 0.0,\n" + "		\"cantidad\": 10.0,\n" + "		\"precioUnitario\": 213954.0,\n"
-				+ "		\"totalExentas\": 0.0,\n" + "		\"totalIVA5\": 0.0,\n"
-				+ "		\"totalIVA10\": 2139543.0,\n" + "		\"afectacionTributaria\": 1,\n"
-				+ "		\"proporcionIVA\": 100,\n" + "		\"tasaIVA\": 10\n" + "	}],\n"
-				+ "	\"totalComprobante\": 2139543.0,\n" + "	\"totalIVA10\": 194503.90909090906,\n"
+				+ "		\"descuento\": 0.0,\n" + "		\"cantidad\": 1.0,\n" + "		\"precioUnitario\": 74300.0,\n"
+				+ "		\"totalExentas\": 0.0,\n" + "		\"totalIVA5\": 0.0,\n" + "		\"totalIVA10\": 74300.0,\n"
+				+ "		\"afectacionTributaria\": 1,\n" + "		\"proporcionIVA\": 100,\n" + "		\"tasaIVA\": 10\n"
+				+ "	}],\n" + "	\"totalComprobante\": 74300.0,\n" + "	\"totalIVA10\": 6754.545454545455,\n"
 				+ "	\"totalIVA5\": 0.0,\n" + "	\"totalExcento\": 0.0\n" + "}";
 
 		String kude2 = "{\"qr\":\"https://ekuatia.set.gov.py/consultas-test/qr?nVersion\\u003d150\\u0026Id\\u003d07800025245001003000065522022122611066050871\\u0026dFeEmiDE\\u003d323032322d31322d32365431343a32323a3335\\u0026dRucRec\\u003d4912021\\u0026dTotGralOpe\\u003d0\\u0026dTotIVA\\u003d0\\u0026cItems\\u003d1\\u0026DigestValue\\u003d372f5439714e426b79376c78672f664364654751764b356f7453577372735336566f736a696c7239786b733d\\u0026IdCSC\\u003d0001\\u0026cHashQR\\u003d2947ffb207dd8b7a9094bd1624c1e32298c6b9673695965aa43ed176d798eade\",\"cdc\":\"07800025245001003000065522022122611066050871\",\"tipo\":\"NRE\"}\n"
@@ -141,7 +140,7 @@ public class test2 {
 
 //		gk.generarKudeVisor("/home/erick/JaspersoftWorkspace/MyReports/remision.jasper",
 //				"/home/erick/reportes/resultado/kude.pdf", "/home/erick/logo.png", c2, k2);
-		
+
 		gk.generarKudeVisor("/home/erick/JaspersoftWorkspace/MyReports/facturaOri.jasper",
 				"/home/erick/reportes/resultado/kude.pdf", "/home/erick/logo.png", c2, k2);
 

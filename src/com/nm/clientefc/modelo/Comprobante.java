@@ -7,7 +7,6 @@ package com.nm.clientefc.modelo;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 
 import com.nm.clientefc.MappingSET;
@@ -21,229 +20,231 @@ import com.nm.clientefc.MappingSET;
 
 public class Comprobante {
 
-   // private Long comprobanteid;
-    
-    
-    //datos contribuyente
-    private Contribuyente contribuyente;
-    
-    private Timbrado timbrado;
+	// private Long comprobanteid;
 
-    private String sucursal;
-   
-    //conforme a la moneda en sifen
-    private String operacionMoneda;
+	// datos contribuyente
+	private Contribuyente contribuyente;
 
-    private Receptor receptor;
-    
-    //private String receptorTipoPersona;
-   private int tipoTransaccion;
-   private String tipoTransaccionStr;
-    //private int tipoImpuesto;
-    
-  
-    private Date fecha;
-    
-    private Date fechaVencimiento; // para factura credito
-    
-    private CondicionOperacion condicionOperacion;
-    
-    private ArrayList<ComprobanteDetalle> detalles = new ArrayList<ComprobanteDetalle>();
-    
-    private Transporte transporte;
+	private Timbrado timbrado;
 
-    
-    private Remision remision;
-    
-    private NotaCreditoDebito notaCreditoDebito;
+	private String sucursal;
 
-    private ArrayList<DocAsociado> docAsociados;
-    
-    private String infoFisco;
-    
-    private double totalComprobante;
-    private double totalIVA10;
-    private double totalIVA5;
-    private double totalExcento;
-    
-    private String cdc;
-    
-    private String motivoEvento;
-    
-    public String getTipoDocAsoDescripcion() {
-    	MappingSET m = new MappingSET();
-    	String out = "";
-    	for (DocAsociado doc : this.getDocAsociados()) {
-    		
+	// conforme a la moneda en sifen
+	private String operacionMoneda;
+
+	private Receptor receptor;
+
+	// private String receptorTipoPersona;
+
+	/**
+	 * OBLIGATORIO para comprobante tipo factura electronica y autofactura
+	 */
+	private int tipoTransaccion;
+	private String descripcionTipoTransaccion;
+
+	// private int tipoImpuesto;
+
+	private Date fecha;
+
+	private Date fechaVencimiento; // para factura credito
+
+	private CondicionOperacion condicionOperacion;
+
+	private ArrayList<ComprobanteDetalle> detalles = new ArrayList<ComprobanteDetalle>();
+
+	private Transporte transporte;
+
+	private Remision remision;
+
+	private NotaCreditoDebito notaCreditoDebito;
+
+	private ArrayList<DocAsociado> docAsociados;
+
+	private String infoFisco;
+
+	private double totalComprobante;
+	private double totalIVA10;
+	private double totalIVA5;
+	private double totalExcento;
+
+	private String cdc;
+
+	private String motivoEvento;
+
+	public String getTipoDocAsoDescripcion() {
+		MappingSET m = new MappingSET();
+		String tipoDoc = "";
+		String out = "";
+		DocAsociado doc = this.getDocAsociados().get(0);
+		tipoDoc = doc.getTipo() + "";
+		for (String[] arr : m.ARR_TIPO_DOCUMENTO) {
+			if (tipoDoc.compareTo(arr[0]) == 0) {
+				out = arr[1];
+			}
 		}
-    	//String idTipo = this.getTipoDocAsoDescripcion();
-    	//m.getTipoDocAsociado(idTipoDoc)
-    	return null;
-    }
+		// String idTipo = this.getTipoDocAsoDescripcion();
+		// m.getTipoDocAsociado(idTipoDoc)
+		return out;
+	}
 
-    public Contribuyente getContribuyente() {
-        return contribuyente;
-    }
+	public Contribuyente getContribuyente() {
+		return contribuyente;
+	}
 
-    public void setContribuyente(Contribuyente contribuyente) {
-        this.contribuyente = contribuyente;
-    }
+	public void setContribuyente(Contribuyente contribuyente) {
+		this.contribuyente = contribuyente;
+	}
 
-    public Timbrado getTimbrado() {
-        return timbrado;
-    }
+	public Timbrado getTimbrado() {
+		return timbrado;
+	}
 
-    public void setTimbrado(Timbrado timbrado) {
-        this.timbrado = timbrado;
-    }
-    
-    public ArrayList<ComprobanteDetalle> getDetalles() {
-        return detalles;
-    }
+	public void setTimbrado(Timbrado timbrado) {
+		this.timbrado = timbrado;
+	}
 
-    public void setDetalles(ArrayList<ComprobanteDetalle> detalles) {
-        this.detalles = detalles;
-    }
-    
-    
-    public String getSucursal() {
-        return sucursal;
-    }
+	public ArrayList<ComprobanteDetalle> getDetalles() {
+		return detalles;
+	}
 
-    public void setSucursal(String sucursal) {
-        this.sucursal = sucursal;
-    }
+	public void setDetalles(ArrayList<ComprobanteDetalle> detalles) {
+		this.detalles = detalles;
+	}
 
-    public String getOperacionMoneda() {
-        return operacionMoneda;
-    }
+	public String getSucursal() {
+		return sucursal;
+	}
 
-    public void setOperacionMoneda(String operacionMoneda) {
-        this.operacionMoneda = operacionMoneda;
-    }
+	public void setSucursal(String sucursal) {
+		this.sucursal = sucursal;
+	}
 
-    public Date getFecha() {
-        return fecha;
-    }
-    
-    public String getFechaSDF(){
-        return new SimpleDateFormat("dd-MM-yyyy").format(fecha);
-    }
+	public String getOperacionMoneda() {
+		return operacionMoneda;
+	}
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
-    }
+	public void setOperacionMoneda(String operacionMoneda) {
+		this.operacionMoneda = operacionMoneda;
+	}
 
-    public Receptor getReceptor() {
-        return receptor;
-    }
+	public Date getFecha() {
+		return fecha;
+	}
 
-    public void setReceptor(Receptor receptor) {
-        this.receptor = receptor;
-    }
+	public String getFechaSDF() {
+		return new SimpleDateFormat("dd-MM-yyyy").format(fecha);
+	}
 
-    public CondicionOperacion getCondicionOperacion() {
-        return condicionOperacion;
-    }
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
 
-    public void setCondicionOperacion(CondicionOperacion condicionOperacion) {
-        this.condicionOperacion = condicionOperacion;
-    }
+	public Receptor getReceptor() {
+		return receptor;
+	}
 
-    public Remision getRemision() {
-        return remision;
-    }
+	public void setReceptor(Receptor receptor) {
+		this.receptor = receptor;
+	}
 
-    public void setRemision(Remision remision) {
-        this.remision = remision;
-    }
-    
-    public Transporte getTransporte() {
-        return transporte;
-    }
+	public CondicionOperacion getCondicionOperacion() {
+		return condicionOperacion;
+	}
 
-    public void setTransporte(Transporte transporte) {
-        this.transporte = transporte;
-    }
+	public void setCondicionOperacion(CondicionOperacion condicionOperacion) {
+		this.condicionOperacion = condicionOperacion;
+	}
 
-    public String getInfoFisco() {
-        return infoFisco;
-    }
+	public Remision getRemision() {
+		return remision;
+	}
 
-    public void setInfoFisco(String infoFisco) {
-        this.infoFisco = infoFisco;
-    }
+	public void setRemision(Remision remision) {
+		this.remision = remision;
+	}
 
-    public NotaCreditoDebito getNotaCreditoDebito() {
-        return notaCreditoDebito;
-    }
+	public Transporte getTransporte() {
+		return transporte;
+	}
 
-    public void setNotaCreditoDebito(NotaCreditoDebito notaCreditoDebito) {
-        this.notaCreditoDebito = notaCreditoDebito;
-    }
+	public void setTransporte(Transporte transporte) {
+		this.transporte = transporte;
+	}
 
-    public ArrayList<DocAsociado> getDocAsociados() {
-        return docAsociados;
-    }
+	public String getInfoFisco() {
+		return infoFisco;
+	}
 
-    public void setDocAsociados(ArrayList<DocAsociado> docAsociados) {
-        this.docAsociados = docAsociados;
-    }
+	public void setInfoFisco(String infoFisco) {
+		this.infoFisco = infoFisco;
+	}
 
-    public double getTotalComprobante() {
-        return totalComprobante;
-    }
+	public NotaCreditoDebito getNotaCreditoDebito() {
+		return notaCreditoDebito;
+	}
 
-    public void setTotalComprobante(double totalComprobante) {
-        this.totalComprobante = totalComprobante;
-    }
+	public void setNotaCreditoDebito(NotaCreditoDebito notaCreditoDebito) {
+		this.notaCreditoDebito = notaCreditoDebito;
+	}
 
-    public double getTotalIVA10() {
-        return totalIVA10;
-    }
+	public ArrayList<DocAsociado> getDocAsociados() {
+		return docAsociados;
+	}
 
-    public void setTotalIVA10(double totalIVA10) {
-        this.totalIVA10 = totalIVA10;
-    }
+	public void setDocAsociados(ArrayList<DocAsociado> docAsociados) {
+		this.docAsociados = docAsociados;
+	}
 
-    public double getTotalIVA5() {
-        return totalIVA5;
-    }
+	public double getTotalComprobante() {
+		return totalComprobante;
+	}
 
-    public void setTotalIVA5(double totalIVA5) {
-        this.totalIVA5 = totalIVA5;
-    }
+	public void setTotalComprobante(double totalComprobante) {
+		this.totalComprobante = totalComprobante;
+	}
 
-    public double getTotalExcento() {
-        return totalExcento;
-    }
+	public double getTotalIVA10() {
+		return totalIVA10;
+	}
 
-    public void setTotalExcento(double totalExcento) {
-        this.totalExcento = totalExcento;
-    }
+	public void setTotalIVA10(double totalIVA10) {
+		this.totalIVA10 = totalIVA10;
+	}
 
-    public String getCdc() {
-        return cdc;
-    }
+	public double getTotalIVA5() {
+		return totalIVA5;
+	}
 
-    public void setCdc(String cdc) {
-        this.cdc = cdc;
-    }
+	public void setTotalIVA5(double totalIVA5) {
+		this.totalIVA5 = totalIVA5;
+	}
 
-    public String getMotivoEvento() {
-        return motivoEvento;
-    }
+	public double getTotalExcento() {
+		return totalExcento;
+	}
 
-    public void setMotivoEvento(String motivoEvento) {
-        this.motivoEvento = motivoEvento;
-    }
+	public void setTotalExcento(double totalExcento) {
+		this.totalExcento = totalExcento;
+	}
+
+	public String getCdc() {
+		return cdc;
+	}
+
+	public void setCdc(String cdc) {
+		this.cdc = cdc;
+	}
+
+	public String getMotivoEvento() {
+		return motivoEvento;
+	}
+
+	public void setMotivoEvento(String motivoEvento) {
+		this.motivoEvento = motivoEvento;
+	}
 
 	public int getTipoTransaccion() {
 		return tipoTransaccion;
-	}
-
-	public String getTipoTransaccionStr() {
-		return tipoTransaccionStr;
 	}
 
 	public String getFechaVencimiento() {
@@ -254,15 +255,19 @@ public class Comprobante {
 		this.tipoTransaccion = tipoTransaccion;
 	}
 
-	public void setTipoTransaccionStr(String tipoTransaccionStr) {
-		this.tipoTransaccionStr = tipoTransaccionStr;
-	}
 	/**
 	 * Settear solo en casos de que sea factura credito
-	 * */
+	 */
 	public void setFechaVencimiento(Date fechaVencimiento) {
 		this.fechaVencimiento = fechaVencimiento;
 	}
 
-    
+	public String getDescripcionTipoTransaccion() {
+		return descripcionTipoTransaccion;
+	}
+
+	public void setDescripcionTipoTransaccion(String descripcionTipoTransaccion) {
+		this.descripcionTipoTransaccion = descripcionTipoTransaccion;
+	}
+
 }
