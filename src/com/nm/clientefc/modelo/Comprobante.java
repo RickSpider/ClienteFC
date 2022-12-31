@@ -37,11 +37,14 @@ public class Comprobante {
     private Receptor receptor;
     
     //private String receptorTipoPersona;
-   // private int tipoTransaccion;
+   private int tipoTransaccion;
+   private String tipoTransaccionStr;
     //private int tipoImpuesto;
     
   
     private Date fecha;
+    
+    private Date fechaVencimiento; // para factura credito
     
     private CondicionOperacion condicionOperacion;
     
@@ -124,7 +127,7 @@ public class Comprobante {
     }
     
     public String getFechaSDF(){
-        return new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(fecha);
+        return new SimpleDateFormat("dd-MM-yyyy").format(fecha);
     }
 
     public void setFecha(Date fecha) {
@@ -234,6 +237,32 @@ public class Comprobante {
     public void setMotivoEvento(String motivoEvento) {
         this.motivoEvento = motivoEvento;
     }
+
+	public int getTipoTransaccion() {
+		return tipoTransaccion;
+	}
+
+	public String getTipoTransaccionStr() {
+		return tipoTransaccionStr;
+	}
+
+	public String getFechaVencimiento() {
+		return new SimpleDateFormat("dd-MM-yyyy").format(fechaVencimiento);
+	}
+
+	public void setTipoTransaccion(int tipoTransaccion) {
+		this.tipoTransaccion = tipoTransaccion;
+	}
+
+	public void setTipoTransaccionStr(String tipoTransaccionStr) {
+		this.tipoTransaccionStr = tipoTransaccionStr;
+	}
+	/**
+	 * Settear solo en casos de que sea factura credito
+	 * */
+	public void setFechaVencimiento(Date fechaVencimiento) {
+		this.fechaVencimiento = fechaVencimiento;
+	}
 
     
 }
