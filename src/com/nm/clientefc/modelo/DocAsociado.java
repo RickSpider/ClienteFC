@@ -13,6 +13,7 @@ import java.util.Calendar;
 public class DocAsociado {
     
     private Long tipo;
+    private String tipoDescripcion;
     private String cdc;
     private Long timbrado;
     private String establecimiento;
@@ -213,6 +214,14 @@ public class DocAsociado {
     public void setConstanciaControlNro(String constanciaControlNro) {
         this.constanciaControlNro = constanciaControlNro;
     }
+
+	public String getTipoDescripcion() {
+		return tipoDescripcion;
+	}
+
+	public void setTipoDescripcion(String tipoDescripcion) {
+		this.tipoDescripcion = tipoDescripcion;
+	}
     
     
     

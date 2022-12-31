@@ -71,19 +71,8 @@ public class Comprobante {
 
 	private String motivoEvento;
 
-	public String getTipoDocAsoDescripcion() {
-		MappingSET m = new MappingSET();
-		String tipoDoc = "";
-		String out = "";
-		DocAsociado doc = this.getDocAsociados().get(0);
-		tipoDoc = doc.getTipo() + "";
-		for (String[] arr : m.ARR_TIPO_DOCUMENTO) {
-			if (tipoDoc.compareTo(arr[0]) == 0) {
-				out = arr[1];
-			}
-		}
-		// String idTipo = this.getTipoDocAsoDescripcion();
-		// m.getTipoDocAsociado(idTipoDoc)
+	public DocAsociado getDocAsociadoObject(){
+		DocAsociado out = this.getDocAsociados().get(0);
 		return out;
 	}
 
