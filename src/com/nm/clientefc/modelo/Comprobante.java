@@ -63,11 +63,6 @@ public class Comprobante {
     private double totalIVA5;
     private double totalExcento;
     
-    //seccion evento (cancelacion, invalidacion, etc)
-    private String cdc;
-    
-    private String motivoEvento;
-    
     public String getTipoDocAsoDescripcion() {
     	MappingSET m = new MappingSET();
     	String out = "";
@@ -218,22 +213,6 @@ public class Comprobante {
 
     public void setTotalExcento(double totalExcento) {
         this.totalExcento = totalExcento;
-    }
-
-    public String getCdc() {
-        return cdc;
-    }
-
-    public void setCdc(String cdc) {
-        this.cdc = cdc;
-    }
-
-    public String getMotivoEvento() {
-        return motivoEvento;
-    }
-
-    public void setMotivoEvento(String motivoEvento) {
-        this.motivoEvento = motivoEvento;
     }
 
     
