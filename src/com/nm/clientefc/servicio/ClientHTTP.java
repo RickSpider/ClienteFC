@@ -78,4 +78,42 @@ public class ClientHTTP {
         
     }
     
+    public boolean enviarCancelacion(String link, String jsonComprobante) throws IOException {
+        System.out.println(jsonComprobante);
+        URL url = new URL(link);
+        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+        urlConnection.setDoOutput(true);        
+        urlConnection.setRequestProperty("Content-Type", "application/json");
+        urlConnection.setRequestMethod("POST");        
+        urlConnection.setUseCaches(false);        
+        urlConnection.setConnectTimeout(10000);        
+        urlConnection.setReadTimeout(10000);        
+        
+        urlConnection.setRequestProperty("charset", "utf-8");
+        
+        urlConnection.connect();        
+        
+        OutputStreamWriter out = new OutputStreamWriter(urlConnection.getOutputStream());        
+        out.write(jsonComprobante);
+        out.close();
+        
+        int httpResult = urlConnection.getResponseCode();
+        System.out.println(httpResult);
+        
+        StringBuffer sb = new StringBuffer();
+        if (httpResult == HttpURLConnection.HTTP_CREATED) {            
+            urlConnection.disconnect(); 
+            return true;            
+            
+        }
+        
+        urlConnection.disconnect(); 
+        return false;
+        
+        
+        
+        
+        
+    }
+    
 }
