@@ -78,6 +78,12 @@ public class ClientHTTP {
         
     }
     
+    public boolean enviarCancelacion(String link, Comprobante comprobante) throws IOException {
+
+    	Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").create();
+        return this.enviarCancelacion(link, gson.toJson(comprobante));        
+    }
+    
     public boolean enviarCancelacion(String link, String jsonComprobante) throws IOException {
         System.out.println(jsonComprobante);
         URL url = new URL(link);
