@@ -20,6 +20,7 @@ public class DocAsociado {
     private String puntoExpedicion;
     private String docNro;
     private Long tipoDocAsociado;
+    private String tipoDocAsociadoDescripcion;
     private Calendar fechaEmision;
     private String compRetencionNro;
     private String resolucionCreditoFiscalNro;
@@ -221,6 +222,14 @@ public class DocAsociado {
 
 	public void setTipoDescripcion(String tipoDescripcion) {
 		this.tipoDescripcion = tipoDescripcion;
+	}
+
+	public String getTipoDocAsociadoDescripcion() {
+		return tipoDocAsociadoDescripcion;
+	}
+
+	public void setTipoDocAsociadoDescripcion(String tipoDocAsociadoDescripcion) {
+		this.tipoDocAsociadoDescripcion = tipoDocAsociadoDescripcion;
 	}
     
     

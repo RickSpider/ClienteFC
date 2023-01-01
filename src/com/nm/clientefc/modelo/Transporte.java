@@ -19,6 +19,7 @@ public class Transporte {
 	private Long modo;
 	private Long responsableFlete;
 	private String condicionNeg;
+	private String condicionNegDescripcion;
 	private String manifiestoNro;
 	private String despachoImpNro;
 	private Date fechaSalida;
@@ -72,6 +73,12 @@ public class Transporte {
 		this.transportista = transportista;
 	}
 
+	
+	public Vehiculo getVehiculoObjeto() {
+		Vehiculo out = this.getVehiculos().get(0);
+		return out;
+	}
+	
 	public Long getTipo() {
 		return tipo;
 	}
@@ -204,11 +211,11 @@ public class Transporte {
 	}
 
 	public String getFechaSalida() {
-		return new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(fechaSalida);
+		return new SimpleDateFormat("dd-MM-yyyy").format(fechaSalida);
 	}
 
 	public String getFechaLlegada() {
-		return new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(fechaLlegada);
+		return new SimpleDateFormat("dd-MM-yyyy").format(fechaLlegada);
 	}
 
 	public void setFechaSalida(Date fechaSalida) {
@@ -217,6 +224,16 @@ public class Transporte {
 
 	public void setFechaLlegada(Date fechaLlegada) {
 		this.fechaLlegada = fechaLlegada;
+	}
+
+
+	public String getCondicionNegDescripcion() {
+		return condicionNegDescripcion;
+	}
+
+
+	public void setCondicionNegDescripcion(String condicionNegDescripcion) {
+		this.condicionNegDescripcion = condicionNegDescripcion;
 	}
 
 }
