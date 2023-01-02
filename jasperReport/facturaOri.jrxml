@@ -468,7 +468,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<text><![CDATA[Precio Unitario]]></text>
+				<text><![CDATA[Precio]]></text>
 			</staticText>
 			<rectangle>
 				<reportElement mode="Transparent" x="-13" y="3" width="580" height="47" uuid="3580e912-0e5f-4b96-aee7-753f9e1ee1c9">
