@@ -531,7 +531,7 @@
 				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="197" y="0" width="360" height="17" uuid="29a26acb-d1cc-4588-96f3-e9f6964376c1">
+				<reportElement x="199" y="0" width="360" height="17" uuid="29a26acb-d1cc-4588-96f3-e9f6964376c1">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="35f706e6-da8b-4701-8a91-35d717dd8fd4"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$F{itemDescripcion}]]></textFieldExpression>
