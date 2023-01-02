@@ -263,17 +263,17 @@
 				<text><![CDATA[Responsable del coste del flete:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="314" y="232" width="133" height="14" uuid="bd5662ae-b072-4ee8-8646-d462ad8b3b7f"/>
+				<reportElement x="305" y="232" width="133" height="14" uuid="bd5662ae-b072-4ee8-8646-d462ad8b3b7f"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Fecha estimada de inicio:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="314" y="204" width="106" height="14" uuid="408031bb-3999-4ef9-9e58-6992b9ef68a9"/>
+				<reportElement x="305" y="204" width="106" height="14" uuid="408031bb-3999-4ef9-9e58-6992b9ef68a9"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Marca del vehículo:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="314" y="218" width="156" height="14" uuid="f662bda3-7d1d-4250-9463-e69fa0653c3a"/>
+				<reportElement x="305" y="218" width="156" height="14" uuid="f662bda3-7d1d-4250-9463-e69fa0653c3a"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Nro. de matrícula del vehículo:]]></text>
 			</staticText>
@@ -283,7 +283,7 @@
 				<text><![CDATA[Condición de la negociación:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="314" y="246" width="115" height="14" uuid="9bf1f4e6-8001-4dfe-a9a2-ca1799faf214">
+				<reportElement x="305" y="246" width="115" height="14" uuid="9bf1f4e6-8001-4dfe-a9a2-ca1799faf214">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
@@ -389,9 +389,11 @@
 				<textFieldExpression><![CDATA[$P{comprobante}.getTransporte().getModoStr()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="148" y="246" width="151" height="14" uuid="3c891b7c-0052-414b-81c6-ecbaf0b99a36"/>
+				<reportElement x="148" y="246" width="155" height="14" uuid="3c891b7c-0052-414b-81c6-ecbaf0b99a36">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{comprobante}.getTransporte().getCondicionNeg()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{comprobante}.getTransporte().getCondicionNegDescripcion()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="160" y="232" width="139" height="14" uuid="05412660-486b-4306-83d5-6eaa84f61b78"/>
@@ -409,22 +411,22 @@
 				<textFieldExpression><![CDATA[$P{comprobante}.getRemision().getFechaFinDelTraslado()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="449" y="232" width="74" height="14" uuid="eee62606-92ba-4e81-b18d-103cc03b8243"/>
+				<reportElement x="440" y="232" width="74" height="14" uuid="eee62606-92ba-4e81-b18d-103cc03b8243"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getTransporte().getFechaSalida()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="431" y="246" width="91" height="14" uuid="60f4d733-001a-4303-abce-05d03628ab13"/>
+				<reportElement x="422" y="246" width="91" height="14" uuid="60f4d733-001a-4303-abce-05d03628ab13"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getTransporte().getFechaLlegada()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="471" y="218" width="74" height="14" uuid="bf3e3220-c69b-43ef-89b3-94baba992186"/>
+				<reportElement x="462" y="218" width="74" height="14" uuid="bf3e3220-c69b-43ef-89b3-94baba992186"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getTransporte().getVehiculoObjeto().getMatriculaNro()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="422" y="204" width="101" height="14" uuid="36a03543-930b-47ae-b18d-066b38f76d65"/>
+				<reportElement x="413" y="204" width="101" height="14" uuid="36a03543-930b-47ae-b18d-066b38f76d65"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getTransporte().getVehiculoObjeto().getMarca()]]></textFieldExpression>
 			</textField>
@@ -464,28 +466,28 @@
 				<reportElement mode="Transparent" x="-9" y="41" width="575" height="37" uuid="af62a01e-ad88-44b0-a17f-5dbebae561ac"/>
 			</rectangle>
 			<textField isBlankWhenNull="true">
-				<reportElement x="147" y="21" width="298" height="14" uuid="21ac402a-4623-449e-85b4-3f33dd4b3710">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-				<textFieldExpression><![CDATA[$P{comprobante}.getDocAsociadoObject().getTipoDescripcion()]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement x="161" y="7" width="285" height="14" uuid="b1436e26-45ac-4f3e-8dde-c66cf6f22bdd">
+				<reportElement x="147" y="21" width="402" height="14" uuid="21ac402a-4623-449e-85b4-3f33dd4b3710">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$P{comprobante}.getDocAsociadoObject().getCdc()]]></textFieldExpression>
 			</textField>
-			<rectangle>
-				<reportElement mode="Transparent" x="-9" y="84" width="575" height="97" uuid="1e3e5036-6da9-41a9-b096-33737d885b90"/>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="-9" y="0" width="575" height="37" uuid="4ff2b27e-4c91-47a4-ad04-0ef04b5bf98f"/>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="-9" y="188" width="575" height="71" uuid="19e896b5-4706-42a6-81fe-b9fe3d9f3d4e"/>
-			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="161" y="7" width="389" height="14" uuid="b1436e26-45ac-4f3e-8dde-c66cf6f22bdd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$P{comprobante}.getDocAsociadoObject().getTipoDescripcion()]]></textFieldExpression>
+			</textField>
 			<rectangle>
 				<reportElement mode="Transparent" x="-9" y="265" width="575" height="61" uuid="fd756cb5-9f22-46cb-9881-69d7eef71359"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="-9" y="82" width="575" height="99" uuid="ee9e1945-c5c6-417d-a0e1-d05de7cba92a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="-8" y="186" width="575" height="75" uuid="2ee02a49-f858-4d04-b561-17af8c388b43"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="-9" y="0" width="575" height="37" uuid="4db4441b-5e3b-47ed-8290-ed8fb26846f7"/>
 			</rectangle>
 		</band>
 	</pageHeader>

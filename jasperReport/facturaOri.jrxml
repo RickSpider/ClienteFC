@@ -478,7 +478,7 @@
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="16" splitType="Stretch">
+		<band height="18" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField>
 				<reportElement x="-11" y="-1" width="46" height="15" uuid="8029d993-0514-4104-a5ab-6565e7a2ed77">
@@ -551,15 +551,6 @@
 				</textElement>
 				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,###,###,###").format(  (double) ( $F{totalIVA5}))]]></textFieldExpression>
 			</textField>
-			<textField evaluationTime="Column">
-				<reportElement x="500" y="0" width="65" height="15" uuid="148fb169-52a3-4ad3-b40e-2027b941687a">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1f93cc1c-890c-4852-8ab6-598ec203615c"/>
-				</reportElement>
-				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="9"/>
-				</textElement>
-				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,###,###,###").format(  (double) ( $F{totalIVA10}))]]></textFieldExpression>
-			</textField>
 			<textField>
 				<reportElement x="244" y="0" width="41" height="15" uuid="b4ad9f9d-d803-4235-81db-0f88a16bf629">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="42945767-d503-4de9-a2ea-4699256c6d70"/>
@@ -570,6 +561,15 @@
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{itemUndMedidaStr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="497" y="1" width="68" height="15" uuid="e28362f2-35bd-4428-acd8-19d4220282b5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="031f3724-c475-4f77-9835-2b97b8accfdb"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,###,###,###").format(  (double) ( $F{totalIVA10}))]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
@@ -651,7 +651,7 @@
 				<text><![CDATA[TOTAL IVA:]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement x="360" y="5" width="65" height="18" uuid="1b41b855-cccb-4451-afbc-f9c94cf89880">
+				<reportElement x="357" y="5" width="65" height="18" uuid="1b41b855-cccb-4451-afbc-f9c94cf89880">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -661,7 +661,7 @@
 				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,###,###,###").format($P{comprobante}.getTotalExcento())]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="429" y="5" width="65" height="18" uuid="d73e43d6-f9aa-442a-9a26-abe33e78d8cd">
+				<reportElement x="427" y="5" width="65" height="18" uuid="d73e43d6-f9aa-442a-9a26-abe33e78d8cd">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -736,7 +736,7 @@
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="-13" y="4" width="580" height="20" uuid="675bbcd2-d4c5-4dfb-b5ed-f7f4c7529c73">
+				<reportElement mode="Transparent" x="-13" y="4" width="580" height="20" uuid="b6da07b8-4e82-4d8a-a2a2-25889aca8d11">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 			</rectangle>

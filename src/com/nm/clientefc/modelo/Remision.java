@@ -119,11 +119,11 @@ public class Remision {
 	}
 
 	public String getFechaInicioDelTraslado() {
-		return new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(fechaInicioDelTraslado);
+		return new SimpleDateFormat("dd-MM-yyyy").format(fechaInicioDelTraslado);
 	}
 
 	public String getFechaFinDelTraslado() {
-		return new SimpleDateFormat("dd-MM-yyyy hh:mm:ss").format(fechaFinDelTraslado);
+		return new SimpleDateFormat("dd-MM-yyyy").format(fechaFinDelTraslado);
 	}
 
 	public void setFechaInicioDelTraslado(Date fechaInicioDelTraslado) {
