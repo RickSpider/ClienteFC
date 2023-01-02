@@ -145,7 +145,7 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="12"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new String("KuDe de ") + $P{tipoDocumento}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new String("KUDE DE ") + $P{tipoDocumento}]]></textFieldExpression>
 			</textField>
 			<rectangle radius="0">
 				<reportElement mode="Transparent" x="-9" y="2" width="575" height="154" uuid="a801b790-afbf-47ed-b409-27a13f4e3f61">
@@ -469,7 +469,7 @@
 				<reportElement x="147" y="21" width="402" height="14" uuid="21ac402a-4623-449e-85b4-3f33dd4b3710">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[$P{comprobante}.getDocAsociadoObject().getCdc()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{comprobante}.getDocAsociadoObject().getDocAsociado()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="161" y="7" width="389" height="14" uuid="b1436e26-45ac-4f3e-8dde-c66cf6f22bdd">

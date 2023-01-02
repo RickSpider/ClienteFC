@@ -11,210 +11,217 @@ import java.util.Calendar;
  * @author BlackSpider
  */
 public class DocAsociado {
-    
-    private Long tipo;
-    private String tipoDescripcion;
-    private String cdc;
-    private Long timbrado;
-    private String establecimiento;
-    private String puntoExpedicion;
-    private String docNro;
-    private Long tipoDocAsociado;
-    private String tipoDocAsociadoDescripcion;
-    private Calendar fechaEmision;
-    private String compRetencionNro;
-    private String resolucionCreditoFiscalNro;
-    private Long constanciaTipo;
-    private Long constanciaNro;
-    private String constanciaControlNro;
 
-    public Long getTipo() {
-        return tipo;
-    }
+	private Long tipo;
+	private String tipoDescripcion;
+	private String cdc;
+	private Long timbrado;
+	private String establecimiento;
+	private String puntoExpedicion;
+	private String docNro;
+	private Long tipoDocAsociado;
+	private String tipoDocAsociadoDescripcion;
+	private Calendar fechaEmision;
+	private String compRetencionNro;
+	private String resolucionCreditoFiscalNro;
+	private Long constanciaTipo;
+	private Long constanciaNro;
+	private String constanciaControlNro;
 
-    /**
-     * Posibles valores
-     * 
-     * 1:Electronico
-     * 2:Impreso
-     * 3:Constancia Electronica
-     * 
-     * @param tipo 
-     */
-    public void setTipo(Long tipo) {
-        this.tipo = tipo;
-    }
+	public String getDocAsociado() {
+		String out = "";
+		if (this.getTipo() == 1) {
+			out = this.getCdc();
+		} else if (this.getTipo() == 2) {
+			out = this.getTipoDocAsociadoDescripcion();
+		} else if (this.getTipo() == 3) {
+			out = this.getConstanciaControlNro();
+		}
+		return out;
+	}
 
-    public String getCdc() {
-        return cdc;
-    }
+	public Long getTipo() {
+		return tipo;
+	}
 
-    /**
-     * Setear en caso que el el tipo sea "Electronico"
-     *  
-     * @param cdc 
-     */
-    public void setCdc(String cdc) {
-        this.cdc = cdc;
-    }
+	/**
+	 * Posibles valores
+	 * 
+	 * 1:Electronico 2:Impreso 3:Constancia Electronica
+	 * 
+	 * @param tipo
+	 */
+	public void setTipo(Long tipo) {
+		this.tipo = tipo;
+	}
 
-    public Long getTimbrado() {
-        return timbrado;
-    }
+	public String getCdc() {
+		return cdc;
+	}
 
-    /**
-     * Setear en caso que el tipo sea "Impreso"
-     *  
-     * @param timbrado 
-     */
-    public void setTimbrado(Long timbrado) {
-        this.timbrado = timbrado;
-    }
+	/**
+	 * Setear en caso que el el tipo sea "Electronico"
+	 * 
+	 * @param cdc
+	 */
+	public void setCdc(String cdc) {
+		this.cdc = cdc;
+	}
 
-    public String getEstablecimiento() {
-        return establecimiento;
-    }
+	public Long getTimbrado() {
+		return timbrado;
+	}
 
-    /**
-     * Setear en caso que el tipo sea "Impreso"
-     * 
-     * ej: 001
-     * 
-     * @param establecimiento 
-     */
-    public void setEstablecimiento(String establecimiento) {
-        this.establecimiento = establecimiento;
-    }
+	/**
+	 * Setear en caso que el tipo sea "Impreso"
+	 * 
+	 * @param timbrado
+	 */
+	public void setTimbrado(Long timbrado) {
+		this.timbrado = timbrado;
+	}
 
-    public String getPuntoExpedicion() {
-        return puntoExpedicion;
-    }
+	public String getEstablecimiento() {
+		return establecimiento;
+	}
 
-    /**
-     * Setear en caso que el tipo sea "Impreso"
-     * 
-     * ej: 001
-     * 
-     * @param puntoExpedicion 
-     */
-    public void setPuntoExpedicion(String puntoExpedicion) {
-        this.puntoExpedicion = puntoExpedicion;
-    }
+	/**
+	 * Setear en caso que el tipo sea "Impreso"
+	 * 
+	 * ej: 001
+	 * 
+	 * @param establecimiento
+	 */
+	public void setEstablecimiento(String establecimiento) {
+		this.establecimiento = establecimiento;
+	}
 
-    public String getDocNro() {
-        return docNro;
-    }
+	public String getPuntoExpedicion() {
+		return puntoExpedicion;
+	}
 
-    /**
-     * 
-     * Setear en caso que el tipo sea "Impreso"
-     * 
-     * ej: 0000001
-     * 
-     * @param docNro 
-     */
-    public void setDocNro(String docNro) {
-        this.docNro = docNro;
-    }
+	/**
+	 * Setear en caso que el tipo sea "Impreso"
+	 * 
+	 * ej: 001
+	 * 
+	 * @param puntoExpedicion
+	 */
+	public void setPuntoExpedicion(String puntoExpedicion) {
+		this.puntoExpedicion = puntoExpedicion;
+	}
 
-    public Long getTipoDocAsociado() {
-        return tipoDocAsociado;
-    }
+	public String getDocNro() {
+		return docNro;
+	}
 
-      /**
-     * 
-     * Setear en caso que el tipo sea "Impreso"
-     * 1: Factura
-     * 2: Nota Credito
-     * 3: Nota Debito
-     * 4: Nota Remision
-     * 5: Comprobante Retencion
-     * 
-     * @param tipoDocAsociado 
-     */
-    public void setTipoDocAsociado(Long tipoDocAsociado) {
-        this.tipoDocAsociado = tipoDocAsociado;
-    }
+	/**
+	 * 
+	 * Setear en caso que el tipo sea "Impreso"
+	 * 
+	 * ej: 0000001
+	 * 
+	 * @param docNro
+	 */
+	public void setDocNro(String docNro) {
+		this.docNro = docNro;
+	}
 
-    public Calendar getFechaEmision() {
-        return fechaEmision;
-    }
+	public Long getTipoDocAsociado() {
+		return tipoDocAsociado;
+	}
 
-    public void setFechaEmision(Calendar fechaEmision) {
-        this.fechaEmision = fechaEmision;
-    }
+	/**
+	 * 
+	 * Setear en caso que el tipo sea "Impreso" 1: Factura 2: Nota Credito 3: Nota
+	 * Debito 4: Nota Remision 5: Comprobante Retencion
+	 * 
+	 * @param tipoDocAsociado
+	 */
+	public void setTipoDocAsociado(Long tipoDocAsociado) {
+		this.tipoDocAsociado = tipoDocAsociado;
+	}
 
-    public String getCompRetencionNro() {
-        return compRetencionNro;
-    }
+	public Calendar getFechaEmision() {
+		return fechaEmision;
+	}
 
-    /**
-     * 
-     * Setear solo si el documento es una retencion 
-     * 
-     * @param compRetencionNro 
-     */
-    public void setCompRetencionNro(String compRetencionNro) {
-        this.compRetencionNro = compRetencionNro;
-    }
+	public void setFechaEmision(Calendar fechaEmision) {
+		this.fechaEmision = fechaEmision;
+	}
 
-    public String getResolucionCreditoFiscalNro() {
-        return resolucionCreditoFiscalNro;
-    }
+	public String getCompRetencionNro() {
+		return compRetencionNro;
+	}
 
-    /**
-     * 
-     * Solo para venta de credito fiscal
-     * 
-     * @param resolucionCreditoFiscalNro 
-     */
-    public void setResolucionCreditoFiscalNro(String resolucionCreditoFiscalNro) {
-        this.resolucionCreditoFiscalNro = resolucionCreditoFiscalNro;
-    }
+	/**
+	 * 
+	 * Setear solo si el documento es una retencion
+	 * 
+	 * @param compRetencionNro
+	 */
+	public void setCompRetencionNro(String compRetencionNro) {
+		this.compRetencionNro = compRetencionNro;
+	}
 
-    public Long getConstanciaTipo() {
-        return constanciaTipo;
-    }
+	public String getResolucionCreditoFiscalNro() {
+		return resolucionCreditoFiscalNro;
+	}
 
-    /**
-     * 
-     * Setear solo si el tipo es "CONSTANCIA ELECTRONICA"
-     * 1: Constancia de no ser contribuyente
-     * 2: constancia de ser mcroroductores
-     * 
-     * @param constanciaTipo 
-     */
-    public void setConstanciaTipo(Long constanciaTipo) {
-        this.constanciaTipo = constanciaTipo;
-    }
+	/**
+	 * 
+	 * Solo para venta de credito fiscal
+	 * 
+	 * @param resolucionCreditoFiscalNro
+	 */
+	public void setResolucionCreditoFiscalNro(String resolucionCreditoFiscalNro) {
+		this.resolucionCreditoFiscalNro = resolucionCreditoFiscalNro;
+	}
 
-    
-    public Long getConstanciaNro() {
-        return constanciaNro;
-    }
+	public Long getConstanciaTipo() {
+		return constanciaTipo;
+	}
 
-    /**
-     * 
-     * Setear solo si tipo es "CONSTANCIA ELECTRONICA", y el tipo de constancia es "CONSTANCIA DE MICROPRODUCTORES"
-     * 
-     * @param constanciaNro 
-     */
-    public void setConstanciaNro(Long constanciaNro) {
-        this.constanciaNro = constanciaNro;
-    }
+	/**
+	 * 
+	 * Setear solo si el tipo es "CONSTANCIA ELECTRONICA" 1: Constancia de no ser
+	 * contribuyente 2: constancia de ser mcroroductores
+	 * 
+	 * @param constanciaTipo
+	 */
+	public void setConstanciaTipo(Long constanciaTipo) {
+		this.constanciaTipo = constanciaTipo;
+	}
 
-    public String getConstanciaControlNro() {
-        return constanciaControlNro;
-    }
-    /**
-     * 
-     * Setear solo si tipo es "CONSTANCIA ELECTRONICA", y el tipo de constancia es "CONSTANCIA DE MICROPRODUCTORES"
-     * 
-     * @param constanciaControlNro
-     */
-    public void setConstanciaControlNro(String constanciaControlNro) {
-        this.constanciaControlNro = constanciaControlNro;
-    }
+	public Long getConstanciaNro() {
+		return constanciaNro;
+	}
+
+	/**
+	 * 
+	 * Setear solo si tipo es "CONSTANCIA ELECTRONICA", y el tipo de constancia es
+	 * "CONSTANCIA DE MICROPRODUCTORES"
+	 * 
+	 * @param constanciaNro
+	 */
+	public void setConstanciaNro(Long constanciaNro) {
+		this.constanciaNro = constanciaNro;
+	}
+
+	public String getConstanciaControlNro() {
+		return constanciaControlNro;
+	}
+
+	/**
+	 * 
+	 * Setear solo si tipo es "CONSTANCIA ELECTRONICA", y el tipo de constancia es
+	 * "CONSTANCIA DE MICROPRODUCTORES"
+	 * 
+	 * @param constanciaControlNro
+	 */
+	public void setConstanciaControlNro(String constanciaControlNro) {
+		this.constanciaControlNro = constanciaControlNro;
+	}
 
 	public String getTipoDescripcion() {
 		return tipoDescripcion;
@@ -231,7 +238,5 @@ public class DocAsociado {
 	public void setTipoDocAsociadoDescripcion(String tipoDocAsociadoDescripcion) {
 		this.tipoDocAsociadoDescripcion = tipoDocAsociadoDescripcion;
 	}
-    
-    
-    
+
 }
