@@ -116,7 +116,7 @@
 				<textFieldExpression><![CDATA[$P{comprobante}.getContribuyente().getRuc() + "-"+$P{comprobante}.getContribuyente().getDv()]]></textFieldExpression>
 			</textField>
 			<image onErrorType="Blank">
-				<reportElement x="-9" y="27" width="89" height="92" uuid="235b09e6-0db0-4a8e-b062-882b8f0b759d">
+				<reportElement x="-7" y="16" width="100" height="100" uuid="235b09e6-0db0-4a8e-b062-882b8f0b759d">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -216,21 +216,21 @@
 				<text><![CDATA[Vencimiento:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="316" y="13" width="30" height="15" uuid="75169ff7-95ac-4dc4-a04f-de0eb20093d3">
+				<reportElement x="320" y="13" width="30" height="15" uuid="75169ff7-95ac-4dc4-a04f-de0eb20093d3">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[RUC:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="316" y="29" width="40" height="15" uuid="7ee605f1-959e-4846-8531-6426890d5bc8">
+				<reportElement x="320" y="29" width="40" height="15" uuid="7ee605f1-959e-4846-8531-6426890d5bc8">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[Cliente:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="316" y="59" width="50" height="15" uuid="e459e154-9065-4305-8dfd-a32765ccd0f5">
+				<reportElement x="320" y="59" width="50" height="15" uuid="e459e154-9065-4305-8dfd-a32765ccd0f5">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
@@ -238,7 +238,7 @@
 				<text><![CDATA[Teléfono:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="316" y="44" width="52" height="15" uuid="12537cb9-6e65-4a1e-9cd8-cf910dfccb10">
+				<reportElement x="320" y="44" width="52" height="15" uuid="12537cb9-6e65-4a1e-9cd8-cf910dfccb10">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -246,7 +246,7 @@
 				<text><![CDATA[Dirección:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="316" y="76" width="110" height="15" uuid="0ef19480-0f47-4fed-8c96-51fa0812b4f3">
+				<reportElement x="320" y="76" width="110" height="15" uuid="0ef19480-0f47-4fed-8c96-51fa0812b4f3">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
@@ -273,30 +273,30 @@
 				<textFieldExpression><![CDATA[$P{comprobante}.getOperacionMoneda()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="346" y="13" width="204" height="15" uuid="6babd014-e698-431e-a9d9-2e8718d30b15"/>
+				<reportElement x="350" y="13" width="204" height="15" uuid="6babd014-e698-431e-a9d9-2e8718d30b15"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getDocNro() + "-"+$P{comprobante}.getReceptor().getDv()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="369" y="44" width="184" height="15" uuid="dfd63b14-6e52-41f0-96eb-0099a08501b0"/>
+				<reportElement x="373" y="44" width="184" height="15" uuid="dfd63b14-6e52-41f0-96eb-0099a08501b0"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getDireccion()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="356" y="29" width="202" height="15" uuid="0ae2f8a4-d31d-4c57-adf8-c4e1773ad07e"/>
+				<reportElement x="360" y="29" width="202" height="15" uuid="0ae2f8a4-d31d-4c57-adf8-c4e1773ad07e"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getRazonSocial()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="366" y="59" width="184" height="15" uuid="023025d4-c974-4d2c-ad30-b156f054111c"/>
+				<reportElement x="370" y="59" width="184" height="15" uuid="023025d4-c974-4d2c-ad30-b156f054111c"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getTelefono()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="130" y="89" width="113" height="15" uuid="4d399b8c-23c5-4fb3-9593-e7564ad0afeb">
+				<reportElement x="130" y="89" width="186" height="15" uuid="4d399b8c-23c5-4fb3-9593-e7564ad0afeb">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[$P{comprobante}.getDocAsociadoObject().getCdc()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{comprobante}.getDocAsociadoObject().getDocAsociado()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="233" y="13" width="74" height="15" uuid="9717091d-c598-4dda-afad-8ded038153db"/>
@@ -304,12 +304,12 @@
 				<textFieldExpression><![CDATA[$P{comprobante}.getFechaVencimiento()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="426" y="76" width="74" height="15" uuid="188a245b-91da-4e86-8fc8-b8387ee2d1b6"/>
+				<reportElement x="430" y="76" width="74" height="15" uuid="188a245b-91da-4e86-8fc8-b8387ee2d1b6"/>
 				<textElement verticalAlignment="Middle" markup="styled"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getDescripcionTipoTransaccion()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="69" y="74" width="231" height="15" uuid="b1077dc7-07dc-4010-b3fe-df204d078b44">
+				<reportElement x="69" y="74" width="247" height="15" uuid="b1077dc7-07dc-4010-b3fe-df204d078b44">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textFieldExpression><![CDATA[$P{comprobante}.getDocAsociadoObject().getTipoDescripcion()]]></textFieldExpression>
