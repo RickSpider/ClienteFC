@@ -275,7 +275,7 @@
 			<textField isBlankWhenNull="true">
 				<reportElement x="350" y="13" width="204" height="15" uuid="6babd014-e698-431e-a9d9-2e8718d30b15"/>
 				<textElement verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getDocNro() + "-"+$P{comprobante}.getReceptor().getDv()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getDocumentoNumero()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="373" y="44" width="184" height="15" uuid="dfd63b14-6e52-41f0-96eb-0099a08501b0"/>
@@ -296,6 +296,7 @@
 				<reportElement x="130" y="89" width="186" height="15" uuid="4d399b8c-23c5-4fb3-9593-e7564ad0afeb">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
+				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getDocAsociadoObject().getDocAsociado()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
@@ -312,6 +313,7 @@
 				<reportElement x="69" y="74" width="247" height="15" uuid="b1077dc7-07dc-4010-b3fe-df204d078b44">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
+				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getDocAsociadoObject().getTipoDescripcion()]]></textFieldExpression>
 			</textField>
 		</band>

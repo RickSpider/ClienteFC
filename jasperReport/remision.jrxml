@@ -181,7 +181,7 @@
 				<text><![CDATA[Fecha de Emisión:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="280" y="62" width="186" height="14" uuid="32984f15-8262-46f5-a438-e3c2b298fd55"/>
+				<reportElement x="280" y="62" width="158" height="14" uuid="32984f15-8262-46f5-a438-e3c2b298fd55"/>
 				<textElement verticalAlignment="Middle"/>
 				<text><![CDATA[ RUC/Documento de identidad:]]></text>
 			</staticText>
@@ -336,13 +336,13 @@
 				<reportElement x="119" y="62" width="141" height="14" uuid="cfa9ad48-1e0d-48fc-84ca-a1ed2eb92b39">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[$P{comprobante}.getContribuyente().getNombre()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getRazonSocial()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="466" y="62" width="91" height="14" uuid="d582c7ba-c705-48f2-b949-c1550884159a">
+				<reportElement x="438" y="62" width="119" height="14" uuid="d582c7ba-c705-48f2-b949-c1550884159a">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[$P{comprobante}.getContribuyente().getRuc()+"-"+$P{comprobante}.getContribuyente().getDv()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getDocumentoNumero()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="100" y="105" width="139" height="14" uuid="9ce3d7d6-4280-4f94-b2ba-1bf3a7231ed1">
@@ -462,9 +462,6 @@
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getTransporte().getTransportista().getFullDocumento()]]></textFieldExpression>
 			</textField>
-			<rectangle>
-				<reportElement mode="Transparent" x="-9" y="41" width="575" height="37" uuid="af62a01e-ad88-44b0-a17f-5dbebae561ac"/>
-			</rectangle>
 			<textField isBlankWhenNull="true">
 				<reportElement x="147" y="21" width="402" height="14" uuid="21ac402a-4623-449e-85b4-3f33dd4b3710">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -488,6 +485,9 @@
 			</rectangle>
 			<rectangle>
 				<reportElement mode="Transparent" x="-9" y="0" width="575" height="37" uuid="4db4441b-5e3b-47ed-8290-ed8fb26846f7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="-9" y="41" width="575" height="37" uuid="a6a8192b-4ecd-447f-9fe2-77778508015f"/>
 			</rectangle>
 		</band>
 	</pageHeader>
