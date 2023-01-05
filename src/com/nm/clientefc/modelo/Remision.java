@@ -88,8 +88,8 @@ public class Remision {
 		this.kilometrosRecorrido = kilometrosRecorrido;
 	}
 
-	public Date getFechaEmiFactura() {
-		return fechaEmiFactura;
+	public String getFechaEmiFactura() {
+		return new SimpleDateFormat("dd-MM-yyyy").format(fechaEmiFactura);
 	}
 
 	/**

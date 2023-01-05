@@ -60,12 +60,11 @@ public class Receptor {
 	}
 
 	public String getDocumentoNumero() {
-		String out = "";
+		String out = this.getDocNro() + "-" + this.getDv();
 		if (this.getTipoDocumento() == 1 ) {
 			out = this.getDocNro();
 			return out;
 		}
-		out = this.getDocNro() + "-" + this.getDv();
 		return out;
 	}
 

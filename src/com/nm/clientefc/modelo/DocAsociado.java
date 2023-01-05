@@ -4,7 +4,9 @@
  */
 package com.nm.clientefc.modelo;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 /**
  *
@@ -21,7 +23,7 @@ public class DocAsociado {
 	private String docNro;
 	private Long tipoDocAsociado;
 	private String tipoDocAsociadoDescripcion;
-	private Calendar fechaEmision;
+	private Date fechaEmision;
 	private String compRetencionNro;
 	private String resolucionCreditoFiscalNro;
 	private Long constanciaTipo;
@@ -142,11 +144,11 @@ public class DocAsociado {
 		this.tipoDocAsociado = tipoDocAsociado;
 	}
 
-	public Calendar getFechaEmision() {
-		return fechaEmision;
+	public String getFechaEmision() {
+		return new SimpleDateFormat("dd-MM-yyyy").format(fechaEmision);
 	}
 
-	public void setFechaEmision(Calendar fechaEmision) {
+	public void setFechaEmision(Date fechaEmision) {
 		this.fechaEmision = fechaEmision;
 	}
 

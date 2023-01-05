@@ -333,15 +333,12 @@
 				<textFieldExpression><![CDATA[$P{comprobante}.getFecha()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="119" y="62" width="141" height="14" uuid="cfa9ad48-1e0d-48fc-84ca-a1ed2eb92b39">
+				<reportElement x="438" y="62" width="124" height="14" uuid="cfa9ad48-1e0d-48fc-84ca-a1ed2eb92b39">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getRazonSocial()]]></textFieldExpression>
-			</textField>
-			<textField isBlankWhenNull="true">
-				<reportElement x="438" y="62" width="119" height="14" uuid="d582c7ba-c705-48f2-b949-c1550884159a">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getDocumentoNumero()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
@@ -486,8 +483,15 @@
 			<rectangle>
 				<reportElement mode="Transparent" x="-9" y="0" width="575" height="37" uuid="4db4441b-5e3b-47ed-8290-ed8fb26846f7"/>
 			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="119" y="62" width="140" height="14" uuid="3ff1194a-63c7-44cc-a0a7-e4e53da72acb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getRazonSocial()]]></textFieldExpression>
+			</textField>
 			<rectangle>
-				<reportElement mode="Transparent" x="-9" y="41" width="575" height="37" uuid="a6a8192b-4ecd-447f-9fe2-77778508015f"/>
+				<reportElement mode="Transparent" x="-9" y="41" width="575" height="37" uuid="5a0fade9-1937-4d85-bfa6-5827470883b4"/>
 			</rectangle>
 		</band>
 	</pageHeader>
