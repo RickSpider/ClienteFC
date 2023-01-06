@@ -60,13 +60,13 @@ public class Receptor {
 	}
 
 	public String getDocumentoNumero() {
-
 		String out = "";
-		if (dv != null || !dv.isEmpty()) {
+		if (dv != null && !dv.isEmpty()) {
 			out = docNro + "-" + dv;
-		} else if (this.getTipoDocumento() == 1) {
-			out = this.getDocNro();
-			return out;
+		} else if (tipoDocumento != null && tipoDocumento == 1) {
+			out = docNro;
+		} else if (tipoDocumento != null && tipoDocumento == 0) {
+			out = docNro;
 		}
 		return out;
 	}
@@ -165,5 +165,16 @@ public class Receptor {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+//	public static void main(String[] args) {
+//		Receptor r = new Receptor();
+//
+//		r.setDocNro("0");
+//		//r.setDv("2");
+//		r.setRazonSocial("Erick");
+//		r.setTipoDocumento((long) 0);
+//
+//		System.out.println(r.getDocumentoNumero() + " documento de " + r.getRazonSocial());
+//	}
 
 }
