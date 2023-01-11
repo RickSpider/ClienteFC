@@ -11,7 +11,7 @@ package com.nm.clientefc.modelo;
 public class NotaCreditoDebito {
     
     private Long motivoEmision;
-
+    private String descripcionMotivoEmision;
     public Long getMotivoEmision() {
         return motivoEmision;
     }
@@ -35,5 +35,13 @@ public class NotaCreditoDebito {
     public void setMotivoEmision(Long motivoEmision) {
         this.motivoEmision = motivoEmision;
     }
+
+	public String getDescripcionMotivoEmision() {
+		return descripcionMotivoEmision;
+	}
+
+	public void setDescripcionMotivoEmision(String descripcionMotivoEmision) {
+		this.descripcionMotivoEmision = descripcionMotivoEmision;
+	}
 
 }

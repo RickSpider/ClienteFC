@@ -246,7 +246,7 @@
 				<text><![CDATA[Dirección:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="320" y="76" width="110" height="15" uuid="0ef19480-0f47-4fed-8c96-51fa0812b4f3">
+				<reportElement x="320" y="74" width="110" height="15" uuid="0ef19480-0f47-4fed-8c96-51fa0812b4f3">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle"/>
@@ -273,14 +273,14 @@
 				<textFieldExpression><![CDATA[$P{comprobante}.getOperacionMoneda()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="350" y="13" width="204" height="15" uuid="6babd014-e698-431e-a9d9-2e8718d30b15"/>
+				<reportElement x="350" y="13" width="212" height="15" uuid="6babd014-e698-431e-a9d9-2e8718d30b15"/>
 				<textElement verticalAlignment="Middle">
 					<font size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getDocumentoNumero()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="373" y="44" width="184" height="15" uuid="dfd63b14-6e52-41f0-96eb-0099a08501b0"/>
+				<reportElement x="373" y="44" width="188" height="15" uuid="dfd63b14-6e52-41f0-96eb-0099a08501b0"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getDireccion()]]></textFieldExpression>
 			</textField>
@@ -290,7 +290,7 @@
 				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getRazonSocial()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="370" y="59" width="184" height="15" uuid="023025d4-c974-4d2c-ad30-b156f054111c"/>
+				<reportElement x="370" y="59" width="190" height="15" uuid="023025d4-c974-4d2c-ad30-b156f054111c"/>
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getReceptor().getTelefono()]]></textFieldExpression>
 			</textField>
@@ -307,7 +307,7 @@
 				<textFieldExpression><![CDATA[$P{comprobante}.getFechaVencimiento()]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="430" y="76" width="74" height="15" uuid="188a245b-91da-4e86-8fc8-b8387ee2d1b6"/>
+				<reportElement x="430" y="74" width="130" height="15" uuid="188a245b-91da-4e86-8fc8-b8387ee2d1b6"/>
 				<textElement verticalAlignment="Middle" markup="styled"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getDescripcionTipoTransaccion()]]></textFieldExpression>
 			</textField>
@@ -318,6 +318,18 @@
 				<textElement verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$P{comprobante}.getDocAsociadoObject().getTipoDescripcion()]]></textFieldExpression>
 			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="402" y="89" width="158" height="15" uuid="dc6c040b-eea8-4a32-bfd3-6a0b09e19c15"/>
+				<textElement verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$P{comprobante}.getNotaCreditoDebito().getDescripcionMotivoEmision()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="320" y="89" width="82" height="15" uuid="0e94d165-9771-4c00-9c41-012f8d398566">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Motivo Emisión:]]></text>
+			</staticText>
 		</band>
 	</pageHeader>
 	<columnHeader>
