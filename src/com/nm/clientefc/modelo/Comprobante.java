@@ -31,6 +31,7 @@ public class Comprobante {
 
 	// conforme a la moneda en sifen
 	private String operacionMoneda;
+	private double operacionMonedaCambio;
 
 	private Receptor receptor;
 
@@ -71,7 +72,7 @@ public class Comprobante {
 
 	private String motivoEvento;
 
-	public DocAsociado getDocAsociadoObject(){
+	public DocAsociado getDocAsociadoObject() {
 		DocAsociado out = this.getDocAsociados().get(0);
 		return out;
 	}
@@ -257,6 +258,14 @@ public class Comprobante {
 
 	public void setDescripcionTipoTransaccion(String descripcionTipoTransaccion) {
 		this.descripcionTipoTransaccion = descripcionTipoTransaccion;
+	}
+
+	public double getOperacionMonedaCambio() {
+		return operacionMonedaCambio;
+	}
+
+	public void setOperacionMonedaCambio(double operacionMonedaCambio) {
+		this.operacionMonedaCambio = operacionMonedaCambio;
 	}
 
 }

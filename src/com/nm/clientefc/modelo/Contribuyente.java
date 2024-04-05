@@ -29,7 +29,6 @@ public class Contribuyente {
 	private Distrito distrito;
 	private String direccion;
 	private String numCasa;
-
 	private String telefono;
 
 	private String email;

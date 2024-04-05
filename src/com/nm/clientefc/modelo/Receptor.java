@@ -24,6 +24,9 @@ public class Receptor {
 	private Long distrito;
 	private Long ciudad;
 
+	private String direccionKude;
+	private String telefonoKude;
+
 	public Receptor() {
 	}
 
@@ -164,6 +167,22 @@ public class Receptor {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getDireccionKude() {
+		return direccionKude;
+	}
+
+	public void setDireccionKude(String direccionKude) {
+		this.direccionKude = direccionKude;
+	}
+
+	public String getTelefonoKude() {
+		return telefonoKude;
+	}
+
+	public void setTelefonoKude(String telefonoKude) {
+		this.telefonoKude = telefonoKude;
 	}
 
 //	public static void main(String[] args) {
